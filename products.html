@@ -287,6 +287,116 @@
             transform: scale(1.05);
         }
 
+        .chiller-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #00bfff;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .chiller-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-top-color: #002e5f;
+        }
+
+        .chiller-card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+        }
+
+        .chiller-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .chiller-card:hover .chiller-card-image img {
+            transform: scale(1.05);
+        }
+
+        .chiller-card-content {
+            padding: 1.5rem;
+        }
+
+        .chiller-card-title {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #002e5f;
+            margin-bottom: 0.5rem;
+        }
+
+        .chiller-card-name {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.95rem;
+            color: #00bfff;
+            font-weight: 600;
+        }
+
+        .chiller-card-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .chiller-card-specs {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .chiller-card-specs.show {
+            display: block;
+        }
+
+        .chiller-spec-item {
+            display: flex;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #555;
+            align-items: center;
+        }
+
+        .chiller-spec-item i {
+            color: #00bfff;
+            margin-right: 0.5rem;
+            min-width: 20px;
+        }
+
+        .chiller-card-expand {
+            position: absolute;
+            bottom: 1rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .chiller-card.expanded .chiller-card-expand {
+            transform: rotate(180deg);
+        }
+
+        .chiller-card.expanded {
+            min-height: auto;
+        }
+
         @media (max-width: 768px) {
             .products-hero h1 {
                 font-size: 2rem;
@@ -318,6 +428,12 @@
 
             .cta-section h3 {
                 font-size: 1.5rem;
+            }
+
+            .chiller-card-expand {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
             }
         }
     </style>
