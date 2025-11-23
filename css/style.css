@@ -1455,6 +1455,25 @@ body{
         font-size: 1.2rem;
     }
 
+    .pt-5.pb-5 .row {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .pt-5.pb-5 .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pt-5.pb-5 .col-lg-4.col-sm-6 {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
     .counters .container{
         grid-template-columns: repeat(2, 1fr);
     }
