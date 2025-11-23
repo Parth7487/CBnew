@@ -621,18 +621,20 @@
                 <div class="product-grid">
                     <div class="chiller-card" onclick="toggleChillerDetails(this)">
                         <div class="chiller-card-image">
-                            <img src="https://via.placeholder.com/300x200?text=Chiller+Unit" alt="Industrial Chiller">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F708625e5ef00441090073af29a7417e0%2Fc17cd077723b46fcaad7bd791f183179?format=webp&width=800" alt="Water Cooled Scroll Chiller">
                         </div>
                         <div class="chiller-card-content">
-                            <h3 class="chiller-card-title">Water Cooled Chiller</h3>
+                            <h3 class="chiller-card-title">Water Cooled Scroll Chiller</h3>
                             <p class="chiller-card-name">High-Performance Industrial Chiller</p>
-                            <p class="chiller-card-description">Efficient water cooling system designed for continuous industrial operations with precise temperature control.</p>
+                            <p class="chiller-card-description">Efficient water cooling system with scroll compressor technology designed for continuous industrial operations with precise temperature control.</p>
                             <div class="chiller-card-specs">
-                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 5-50 TR</div>
-                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: -5°C to 35°C</div>
-                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Energy Efficient</div>
-                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Low Noise Operation</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 5-90 TR</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: (+) 25°C to (–) 10°C</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Scroll Compressor Type</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> CFC Free Refrigerants</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Shell & Tube Evaporator/Condenser</div>
                             </div>
+                            <button class="chiller-specs-btn" onclick="openChillerModal(event)">View Full Specs</button>
                         </div>
                         <div class="chiller-card-expand">
                             <i class="fas fa-chevron-down"></i>
@@ -677,6 +679,70 @@
                         <div class="chiller-card-expand">
                             <i class="fas fa-chevron-down"></i>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chiller Specs Modal -->
+            <div id="chillerModal" class="chiller-modal">
+                <div class="chiller-modal-content">
+                    <button class="chiller-modal-close" onclick="closeChillerModal()">&times;</button>
+                    <h2>Water Cooled Scroll Chiller - Detailed Specifications</h2>
+                    <div class="chiller-specs-table-wrapper">
+                        <table class="chiller-specs-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Capacity Range</td>
+                                <td>5 TR to 90 TR</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature Range</td>
+                                <td>(+) 25°C to (–) 10°C</td>
+                            </tr>
+                            <tr>
+                                <td>Compressor Type</td>
+                                <td>Scroll</td>
+                            </tr>
+                            <tr>
+                                <td>Evaporator Type</td>
+                                <td>Shell & tube type with CS shell & copper tubes (Standard)/ BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Condenser Type</td>
+                                <td>Shell & finned tube type with CS shell & copper finned tubes (Standard)/ BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigeration Controls</td>
+                                <td>Valves, filter dryer, Solenoid valves, Expansion valve</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerant</td>
+                                <td>R-407c, R-134a, R-410a, R404a (CFC Free)</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Safety</td>
+                                <td>Motor overload protection, SPP/RP/OV/UV protection</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Safety</td>
+                                <td>LP/HP/Anti-freeze/Chilled water/CT Water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Design Ambient Temperature</td>
+                                <td>0° C to 50° C</td>
+                            </tr>
+                            <tr>
+                                <td>Controller Type</td>
+                                <td>PID (Standard)/PLC/Microprocessor</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>DOL/VFD/Soft starter (Optional)</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
