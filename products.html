@@ -1253,14 +1253,35 @@
             }
         }
 
+        function openAirCooledChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('airCooledChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeAirCooledChillerModal() {
+            const modal = document.getElementById('airCooledChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
         window.onclick = function(event) {
             const chillerModal = document.getElementById('chillerModal');
             const brineChillerModal = document.getElementById('brineChillerModal');
+            const airCooledChillerModal = document.getElementById('airCooledChillerModal');
             if (event.target === chillerModal) {
                 closeChillerModal();
             }
             if (event.target === brineChillerModal) {
                 closeBrineChillerModal();
+            }
+            if (event.target === airCooledChillerModal) {
+                closeAirCooledChillerModal();
             }
         }
     </script>
