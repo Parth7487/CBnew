@@ -1554,12 +1554,30 @@
             }
         }
 
+        function openWaterCooledScrewChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('waterCooledScrewChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeWaterCooledScrewChillerModal() {
+            const modal = document.getElementById('waterCooledScrewChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
         window.onclick = function(event) {
             const chillerModal = document.getElementById('chillerModal');
             const brineChillerModal = document.getElementById('brineChillerModal');
             const airCooledChillerModal = document.getElementById('airCooledChillerModal');
             const batchingChillerModal = document.getElementById('batchingChillerModal');
             const airCooledScrewChillerModal = document.getElementById('airCooledScrewChillerModal');
+            const waterCooledScrewChillerModal = document.getElementById('waterCooledScrewChillerModal');
             if (event.target === chillerModal) {
                 closeChillerModal();
             }
@@ -1574,6 +1592,9 @@
             }
             if (event.target === airCooledScrewChillerModal) {
                 closeAirCooledScrewChillerModal();
+            }
+            if (event.target === waterCooledScrewChillerModal) {
+                closeWaterCooledScrewChillerModal();
             }
         }
     </script>
