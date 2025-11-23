@@ -867,9 +867,22 @@ body{
         
         .footer .footer-top .footer-info,
         .footer .footer-top .footer-links,
-        .footer .footer-top .footer-contact,
-        .footer .footer-top .footer-newsletter {
+        .footer .footer-top .footer-contact {
             margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .footer .footer-top .col-lg-3 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer .footer-top .col-lg-3 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
         
         .footer .footer-top .social-links a {
