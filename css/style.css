@@ -136,6 +136,12 @@ body{
     text-decoration: underline;
 }
 
+.header .navbar ul li a.active{
+    color: #00bfff;
+    border-bottom: 2px solid #00bfff;
+    padding-bottom: 0.5rem;
+}
+
 .header .logo i{
     padding: 0.5rem;
 }
