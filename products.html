@@ -89,7 +89,13 @@
         }
 
         .product-category {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            padding: 2.5rem 0;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .product-category:last-child {
+            border-bottom: none;
         }
 
         .category-title {
@@ -99,12 +105,30 @@
             font-weight: 700;
             display: flex;
             align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #00bfff;
+            position: relative;
+        }
+
+        .category-title::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00bfff 0%, #002e5f 100%);
+            border-radius: 2px;
         }
 
         .category-title i {
             color: #00bfff;
             margin-right: 1rem;
             font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .category-title:hover i {
+            transform: scale(1.1);
         }
 
         .product-grid {
@@ -300,7 +324,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo"><img src="https://cdn.builder.io/api/v1/image/assets%2F0a24d166f76b47b39bc30cd911b55f51%2F277bfb15c5d64fa3afba7721410f74c7?format=webp&width=800" alt="CB GLOBLE INDIA"></a>
+        <a href="index.html" class="logo"><img src="https://cdn.builder.io/api/v1/image/assets%2F0a24d166f76b47b39bc30cd911b55f51%2F277bfb15c5d64fa3afba7721410f74c7?format=webp&width=800" alt="CB GLOBLE INDIA" style="height: 16rem; width: auto;"></a>
         <div class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
@@ -324,6 +348,15 @@
 
     <section class="products-section">
         <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; color: #002e5f; margin-bottom: 1rem; position: relative; padding-bottom: 1rem;">
+                    Our Product Categories
+                    <span style="display: block; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 100px; height: 4px; background: #00bfff; border-radius: 2px;"></span>
+                </h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto; line-height: 1.8;">
+                    Explore our comprehensive range of plastic products and industrial solutions designed to meet your manufacturing needs.
+                </p>
+            </div>
             <div class="product-category">
                 <h2 class="category-title"><i class="fas fa-box"></i> Plastic Containers & Packaging</h2>
                 <div class="product-grid">

@@ -12,6 +12,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 html{
     font-size: 62.5%;
 }
@@ -861,9 +867,22 @@ body{
         
         .footer .footer-top .footer-info,
         .footer .footer-top .footer-links,
-        .footer .footer-top .footer-contact,
-        .footer .footer-top .footer-newsletter {
+        .footer .footer-top .footer-contact {
             margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .footer .footer-top .col-lg-3 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer .footer-top .col-lg-3 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
         
         .footer .footer-top .social-links a {
@@ -1079,7 +1098,19 @@ body{
             margin-left: 1rem;
             margin-right: 2rem;
         }
-        
+
+        .projects-mobile-slider {
+            display: none;
+        }
+
+        .header .navbar {
+            transition: top 0.3s ease;
+        }
+
+        .header .fa-bars {
+            transition: transform 0.3s ease;
+        }
+
 @media (max-width: 1200px){
     .faq{
         min-height: 70vh;
@@ -1115,24 +1146,40 @@ body{
         left: 0;
         height: auto;
         width: 100%;
-        background-color: white;
+        background-color: #ffffff;
         z-index: 1000;
         border-top: .1rem solid rgba(0,0,0,.3);
+        transition: top 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .header .navbar ul{
         height: 100%;
         width: 100%;
         flex-flow: column;
+        padding: 1rem 0;
     }
 
     .header .navbar ul li{
-        margin: 1rem 0;
+        margin: 0.8rem 0;
+        padding: 0 2rem;
     }
 
     .header .navbar ul li a{
-        color: grey;
-        font-size: 2.4rem;
+        color: #333;
+        font-size: 1.8rem;
+        font-weight: 500;
+        display: block;
+        padding: 0.5rem 0;
+        transition: color 0.2s ease;
+    }
+
+    .header .navbar ul li a:hover{
+        color: #00bfff;
+    }
+
+    .header .fa-bars {
+        z-index: 1001;
     }
 
     .header .fa-times{
@@ -1422,6 +1469,41 @@ body{
 
     .communicate p{
         font-size: 1.2rem;
+    }
+
+    .pt-5.pb-5 .row {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 1rem;
+    }
+
+    .pt-5.pb-5 .row::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .pt-5.pb-5 .row::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .pt-5.pb-5 .row::-webkit-scrollbar-thumb {
+        background: #00bfff;
+        border-radius: 10px;
+    }
+
+    .pt-5.pb-5 .col-lg-4.col-sm-6 {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .pt-5.pb-5 .item {
+        margin-bottom: 1.5rem;
     }
 
     .counters .container{
