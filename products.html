@@ -287,6 +287,278 @@
             transform: scale(1.05);
         }
 
+        .chiller-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #00bfff;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .chiller-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-top-color: #002e5f;
+        }
+
+        .chiller-card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+        }
+
+        .chiller-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .chiller-card:hover .chiller-card-image img {
+            transform: scale(1.05);
+        }
+
+        .chiller-card-content {
+            padding: 1.5rem;
+        }
+
+        .chiller-card-title {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #002e5f;
+            margin-bottom: 0.5rem;
+        }
+
+        .chiller-card-name {
+            margin: 0 0 0.5rem 0;
+            font-size: 0.95rem;
+            color: #00bfff;
+            font-weight: 600;
+        }
+
+        .chiller-card-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .chiller-card-specs {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .chiller-card-specs.show {
+            display: block;
+        }
+
+        .chiller-spec-item {
+            display: flex;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #555;
+            align-items: center;
+        }
+
+        .chiller-spec-item i {
+            color: #00bfff;
+            margin-right: 0.5rem;
+            min-width: 20px;
+        }
+
+        .chiller-card-expand {
+            position: absolute;
+            bottom: 1rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .chiller-card.expanded .chiller-card-expand {
+            transform: rotate(180deg);
+        }
+
+        .chiller-card.expanded {
+            min-height: auto;
+        }
+
+        .chiller-specs-btn {
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .chiller-specs-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+        }
+
+        .chiller-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .chiller-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .chiller-modal-content {
+            background-color: #fefefe;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+            position: relative;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .chiller-modal-close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #002e5f;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .chiller-modal-close:hover {
+            color: #00bfff;
+            transform: scale(1.2);
+        }
+
+        .chiller-modal-content h2 {
+            color: #002e5f;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .chiller-specs-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .chiller-specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        .chiller-specs-table th,
+        .chiller-specs-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .chiller-specs-table th {
+            background-color: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+        }
+
+        .chiller-specs-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .chiller-specs-table tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .chiller-specs-table td:first-child {
+            font-weight: 600;
+            color: #002e5f;
+            width: 35%;
+        }
+
+        @media (max-width: 768px) {
+            .chiller-modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+
+            .chiller-modal-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .chiller-specs-table th,
+            .chiller-specs-table td {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .chiller-modal-close {
+                right: 1rem;
+                top: 1rem;
+                font-size: 1.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .products-hero h1 {
                 font-size: 2rem;
@@ -318,6 +590,12 @@
 
             .cta-section h3 {
                 font-size: 1.5rem;
+            }
+
+            .chiller-card-expand {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -495,6 +773,551 @@
                     </div>
                 </div>
             </div>
+
+            <div class="product-category">
+                <h2 class="category-title"><i class="fas fa-snowflake"></i> Chillers</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.8;">
+                    Professional chiller systems and cooling solutions designed to maintain optimal temperatures for industrial plastic manufacturing equipment and processes.
+                </p>
+
+                <div class="product-grid">
+                    <div class="chiller-card" onclick="toggleChillerDetails(this)">
+                        <div class="chiller-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F708625e5ef00441090073af29a7417e0%2Fc17cd077723b46fcaad7bd791f183179?format=webp&width=800" alt="Water Cooled Scroll Chiller">
+                        </div>
+                        <div class="chiller-card-content">
+                            <h3 class="chiller-card-title">Water Cooled Scroll Chiller</h3>
+                            <p class="chiller-card-name">High-Performance Industrial Chiller</p>
+                            <p class="chiller-card-description">Efficient water cooling system with scroll compressor technology designed for continuous industrial operations with precise temperature control.</p>
+                            <div class="chiller-card-specs">
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 5-90 TR</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: (+) 25°C to (–) 10°C</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Scroll Compressor Type</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> CFC Free Refrigerants</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Shell & Tube Evaporator/Condenser</div>
+                            </div>
+                            <button class="chiller-specs-btn" onclick="openChillerModal(event)">View Full Specs</button>
+                        </div>
+                        <div class="chiller-card-expand">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="chiller-card" onclick="toggleChillerDetails(this)">
+                        <div class="chiller-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F708625e5ef00441090073af29a7417e0%2Fef3464e2440a4a68ba5bce8abf3ccf7b?format=webp&width=800" alt="Brine Chiller">
+                        </div>
+                        <div class="chiller-card-content">
+                            <h3 class="chiller-card-title">Brine Chiller</h3>
+                            <p class="chiller-card-name">Wide Range Cooling Solution</p>
+                            <p class="chiller-card-description">Specialized brine chiller system utilizing glycol and methanol solutions for extreme temperature applications in industrial operations.</p>
+                            <div class="chiller-card-specs">
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 1-500 TR</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: 0°C to (–) 40°C</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Screw/Reciprocating Compressor</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> CFC Free Refrigerants</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Economized Operation</div>
+                            </div>
+                            <button class="chiller-specs-btn" onclick="openBrineChillerModal(event)">View Full Specs</button>
+                        </div>
+                        <div class="chiller-card-expand">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="chiller-card" onclick="toggleChillerDetails(this)">
+                        <div class="chiller-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F708625e5ef00441090073af29a7417e0%2F8cb03ab75422484999b80df90a9e6cae?format=webp&width=800" alt="Air Cooled Scroll Chiller">
+                        </div>
+                        <div class="chiller-card-content">
+                            <h3 class="chiller-card-title">Air Cooled Scroll Chiller</h3>
+                            <p class="chiller-card-name">Compact Cooling Solution</p>
+                            <p class="chiller-card-description">Efficient air-cooled chiller system with scroll compressor technology perfect for applications where water supply is limited or unavailable.</p>
+                            <div class="chiller-card-specs">
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 5-78 TR</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: (+) 25°C to (–) 10°C</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Scroll Compressor</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> CFC Free Refrigerants</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Aluminium Finned Condenser</div>
+                            </div>
+                            <button class="chiller-specs-btn" onclick="openAirCooledChillerModal(event)">View Full Specs</button>
+                        </div>
+                        <div class="chiller-card-expand">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="chiller-card" onclick="toggleChillerDetails(this)">
+                        <div class="chiller-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F708625e5ef00441090073af29a7417e0%2F2ca2f41f8a834e12a48ddbfdc38e7db5?format=webp&width=800" alt="Air Cooled Screw Chiller">
+                        </div>
+                        <div class="chiller-card-content">
+                            <h3 class="chiller-card-title">Air Cooled Screw Chiller</h3>
+                            <p class="chiller-card-name">High-Capacity Cooling System</p>
+                            <p class="chiller-card-description">Compact semi-hermetic/open screw compressor system delivering economized cooling for large-scale industrial applications with superior efficiency.</p>
+                            <div class="chiller-card-specs">
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 40-500 TR</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: (+) 25°C to (–) 10°C</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Screw Compressor Type</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Economized Operation</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> CFC Free Refrigerants</div>
+                            </div>
+                            <button class="chiller-specs-btn" onclick="openAirCooledScrewChillerModal(event)">View Full Specs</button>
+                        </div>
+                        <div class="chiller-card-expand">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="chiller-card" onclick="toggleChillerDetails(this)">
+                        <div class="chiller-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F708625e5ef00441090073af29a7417e0%2Fa7aced2975214c6ea1f875c54a434719?format=webp&width=800" alt="Batching Chiller">
+                        </div>
+                        <div class="chiller-card-content">
+                            <h3 class="chiller-card-title">Batching Chiller</h3>
+                            <p class="chiller-card-name">For Batching Plant</p>
+                            <p class="chiller-card-description">Specialized chiller system designed for batching plants with air-cooled or water-cooled capabilities, handling high capacity cooling requirements.</p>
+                            <div class="chiller-card-specs">
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 20-360 TR</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: (+) 4°C</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Air/Water Cooled Options</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Sealed Scroll/Reciprocating Compressor</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Muddy Water Handling</div>
+                            </div>
+                            <button class="chiller-specs-btn" onclick="openBatchingChillerModal(event)">View Full Specs</button>
+                        </div>
+                        <div class="chiller-card-expand">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+
+                    <div class="chiller-card" onclick="toggleChillerDetails(this)">
+                        <div class="chiller-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F708625e5ef00441090073af29a7417e0%2Fad614cff5f654df08daa8d3bae3376b4?format=webp&width=800" alt="Water Cooled Screw Chiller">
+                        </div>
+                        <div class="chiller-card-content">
+                            <h3 class="chiller-card-title">Water Cooled Screw Chiller</h3>
+                            <p class="chiller-card-name">Heavy-Duty Cooling Solution</p>
+                            <p class="chiller-card-description">Robust water-cooled screw chiller system with semi-hermetic/open screw compressor delivering economized, high-capacity cooling for industrial operations.</p>
+                            <div class="chiller-card-specs">
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Cooling Capacity: 40-500 TR</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Temperature Range: (+) 25°C to (–) 10°C</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Screw Compressor</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> Economized Operation</div>
+                                <div class="chiller-spec-item"><i class="fas fa-check-circle"></i> CFC Free Refrigerants</div>
+                            </div>
+                            <button class="chiller-specs-btn" onclick="openWaterCooledScrewChillerModal(event)">View Full Specs</button>
+                        </div>
+                        <div class="chiller-card-expand">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Water Cooled Scroll Chiller Specs Modal -->
+            <div id="chillerModal" class="chiller-modal">
+                <div class="chiller-modal-content">
+                    <button class="chiller-modal-close" onclick="closeChillerModal()">&times;</button>
+                    <h2>Water Cooled Scroll Chiller - Detailed Specifications</h2>
+                    <div class="chiller-specs-table-wrapper">
+                        <table class="chiller-specs-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Capacity Range</td>
+                                <td>5 TR to 90 TR</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature Range</td>
+                                <td>(+) 25°C to (–) 10°C</td>
+                            </tr>
+                            <tr>
+                                <td>Compressor Type</td>
+                                <td>Scroll</td>
+                            </tr>
+                            <tr>
+                                <td>Evaporator Type</td>
+                                <td>Shell & tube type with CS shell & copper tubes (Standard)/ BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Condenser Type</td>
+                                <td>Shell & finned tube type with CS shell & copper finned tubes (Standard)/ BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigeration Controls</td>
+                                <td>Valves, filter dryer, Solenoid valves, Expansion valve</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerant</td>
+                                <td>R-407c, R-134a, R-410a, R404a (CFC Free)</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Safety</td>
+                                <td>Motor overload protection, SPP/RP/OV/UV protection</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Safety</td>
+                                <td>LP/HP/Anti-freeze/Chilled water/CT Water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Design Ambient Temperature</td>
+                                <td>0° C to 50° C</td>
+                            </tr>
+                            <tr>
+                                <td>Controller Type</td>
+                                <td>PID (Standard)/PLC/Microprocessor</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>DOL/VFD/Soft starter (Optional)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brine Chiller Specs Modal -->
+            <div id="brineChillerModal" class="chiller-modal">
+                <div class="chiller-modal-content">
+                    <button class="chiller-modal-close" onclick="closeBrineChillerModal()">&times;</button>
+                    <h2>Brine Chiller - Detailed Specifications</h2>
+                    <div class="chiller-specs-table-wrapper">
+                        <table class="chiller-specs-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Brine</td>
+                                <td>Glycol, methanol, CaC12 Etc.</td>
+                            </tr>
+                            <tr>
+                                <td>Capacity Range</td>
+                                <td>1 TR to 500 TR</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature Range</td>
+                                <td>0°C to (–) 40°C</td>
+                            </tr>
+                            <tr>
+                                <td>Compressor Type</td>
+                                <td>Semi-hermetic screw/reciprocating, open screw/Reciprocating</td>
+                            </tr>
+                            <tr>
+                                <td>Evaporator Type</td>
+                                <td>Shell & tube type with CS/SS shell & Copper /SS tubes, BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Condenser Type</td>
+                                <td>Shell & finned tube type</td>
+                            </tr>
+                            <tr>
+                                <td>Operation</td>
+                                <td>Economized</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigeration Controls</td>
+                                <td>Suction/Discharge/oil pressure Switch/transmitter, Suction/discharge/oil/chilled water /cooling water temperature sensors/transmitters, Chilled water/CT water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerant</td>
+                                <td>R-407c, R-134a, R404a (CFC Free)</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Safety</td>
+                                <td>Motor overload protection, SPP/RP/OV/UV protection</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Safety</td>
+                                <td>LP/HP/pressure/Oil/Anti-freeze/Chilled water/CT water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Design Ambient Temperature</td>
+                                <td>0° C to 50° C</td>
+                            </tr>
+                            <tr>
+                                <td>Controller Type</td>
+                                <td>PLC/Microprocessor/PID</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>DOL/VFD/Soft starter (Optional)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Air Cooled Scroll Chiller Specs Modal -->
+            <div id="airCooledChillerModal" class="chiller-modal">
+                <div class="chiller-modal-content">
+                    <button class="chiller-modal-close" onclick="closeAirCooledChillerModal()">&times;</button>
+                    <h2>Air Cooled Scroll Chiller - Detailed Specifications</h2>
+                    <div class="chiller-specs-table-wrapper">
+                        <table class="chiller-specs-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Capacity Range</td>
+                                <td>5 TR to 78 TR</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature Range</td>
+                                <td>(+) 25°C to (–) 10°C</td>
+                            </tr>
+                            <tr>
+                                <td>Compressor Type</td>
+                                <td>Scroll</td>
+                            </tr>
+                            <tr>
+                                <td>Evaporator Type</td>
+                                <td>Shell & tube type with CS shell & copper tubes (Standard)/ BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Condenser Type</td>
+                                <td>Finned tube type, with internally grooved tubes and aluminium fins and hydrophilic coating</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigeration Controls</td>
+                                <td>Valves, filter dryer, Solenoid valves, Expansion valve</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerant</td>
+                                <td>R-407c, R-134a, R-410a, R404a (CFC Free)</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Safety</td>
+                                <td>Motor overload protection, SPP/RP/OV/UV protection</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Safety</td>
+                                <td>LP/HP/Anti-freeze/Chilled water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Design Ambient Temperature</td>
+                                <td>0° C to 50° C</td>
+                            </tr>
+                            <tr>
+                                <td>Controller Type</td>
+                                <td>PID (Standard)/PLC/Microprocessor</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>DOL/VFD/Soft Starter (Optional)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batching Chiller Specs Modal -->
+            <div id="batchingChillerModal" class="chiller-modal">
+                <div class="chiller-modal-content">
+                    <button class="chiller-modal-close" onclick="closeBatchingChillerModal()">&times;</button>
+                    <h2>Batching Chiller - Detailed Specifications</h2>
+                    <div class="chiller-specs-table-wrapper">
+                        <table class="chiller-specs-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Type</td>
+                                <td>Air cooled/Water cooled</td>
+                            </tr>
+                            <tr>
+                                <td>Capacity Range</td>
+                                <td>20 TR to 360 TR</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature Range</td>
+                                <td>(+) 4°C</td>
+                            </tr>
+                            <tr>
+                                <td>Compressor Type</td>
+                                <td>Sealed scroll/Semi-hermetic reciprocating/screw</td>
+                            </tr>
+                            <tr>
+                                <td>Evaporator Type</td>
+                                <td>Shell & tube type with CS shell & copper tubes, BPHE (Ready to handle muddy water)</td>
+                            </tr>
+                            <tr>
+                                <td>Condenser Type</td>
+                                <td>Finned tube type, with internally grooved tubes & aluminium fins and hydrophilic coating, shell & tube type (Ready to work in dusty atmosphere)</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigeration Controls</td>
+                                <td>Valves, filter dryer, Solenoid valves, Expansion valve</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerant</td>
+                                <td>R-407c, R-134a, R404a (CFC Free)</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Safety</td>
+                                <td>Motor overload protection, SPP/RP/OV/UV protection</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Safety</td>
+                                <td>LP/HP/ Anti-freeze/ Chilled water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Design Ambient Temperature</td>
+                                <td>0° C to 50° C</td>
+                            </tr>
+                            <tr>
+                                <td>Controller Type</td>
+                                <td>PLC/ Microprocessor/ PID</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>DOL/VFD/ Soft starter (Optional)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Air Cooled Screw Chiller Specs Modal -->
+            <div id="airCooledScrewChillerModal" class="chiller-modal">
+                <div class="chiller-modal-content">
+                    <button class="chiller-modal-close" onclick="closeAirCooledScrewChillerModal()">&times;</button>
+                    <h2>Air Cooled Screw Chiller - Detailed Specifications</h2>
+                    <div class="chiller-specs-table-wrapper">
+                        <table class="chiller-specs-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Capacity Range</td>
+                                <td>40 TR to 500 TR</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature Range</td>
+                                <td>(+) 25°C to (–) 10°C</td>
+                            </tr>
+                            <tr>
+                                <td>Compressor Type</td>
+                                <td>Compact semi-hermetic/open screw</td>
+                            </tr>
+                            <tr>
+                                <td>Evaporator Type</td>
+                                <td>Shell & tube type with CS shell & copper tubes (Standard)/ BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Condenser Type</td>
+                                <td>Finned tube type, with internally grooved tubes and aluminium fins and hydrophilic coating</td>
+                            </tr>
+                            <tr>
+                                <td>Operation</td>
+                                <td>Economized</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigeration Controls</td>
+                                <td>Valves, filter dryer, Solenoid valves, Electronic Expansion valve</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerant</td>
+                                <td>R-407c, R-134a (CFC Free)</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Safety</td>
+                                <td>Motor overload protection, SPP/RP/OV/UV protection</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Safety</td>
+                                <td>Suction/Discharge pressure Switch/transmitter, Suction/discharge/chilled water /cooling water temperature sensors/transmitters, Chilled water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Design Ambient Temperature</td>
+                                <td>0° C to 50° C</td>
+                            </tr>
+                            <tr>
+                                <td>Controller Type</td>
+                                <td>PLC/Microprocessor</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>DOL/VFD/Soft starter (Optional)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Water Cooled Screw Chiller Specs Modal -->
+            <div id="waterCooledScrewChillerModal" class="chiller-modal">
+                <div class="chiller-modal-content">
+                    <button class="chiller-modal-close" onclick="closeWaterCooledScrewChillerModal()">&times;</button>
+                    <h2>Water Cooled Screw Chiller - Detailed Specifications</h2>
+                    <div class="chiller-specs-table-wrapper">
+                        <table class="chiller-specs-table">
+                            <tr>
+                                <th>Specification</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Capacity Range</td>
+                                <td>40 TR to 500 TR</td>
+                            </tr>
+                            <tr>
+                                <td>Temperature Range</td>
+                                <td>(+) 25°C to (–) 10°C</td>
+                            </tr>
+                            <tr>
+                                <td>Compressor Type</td>
+                                <td>Compact semi-hermetic/open screw</td>
+                            </tr>
+                            <tr>
+                                <td>Evaporator Type</td>
+                                <td>Shell & tube type with CS shell & copper tubes (Standard)/ BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Condenser Type</td>
+                                <td>Shell & finned tubes type (Standard) / BPHE</td>
+                            </tr>
+                            <tr>
+                                <td>Operation</td>
+                                <td>Economized</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigeration Controls</td>
+                                <td>Suction/Discharge pressure Switch/ transmitter, Suction/discharge/chilled water /cooling water temperature sensors/transmitters, Chilled water /CT water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Refrigerant</td>
+                                <td>R-407c, R-134a, R404a (CFC Free)</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical Safety</td>
+                                <td>Motor overload protection, SPP/RP/OV/UV protection</td>
+                            </tr>
+                            <tr>
+                                <td>Mechanical Safety</td>
+                                <td>LP/HP/Anti-freeze/Chilled water/CT water flow switch</td>
+                            </tr>
+                            <tr>
+                                <td>Design Ambient Temperature</td>
+                                <td>0° C to 50° C</td>
+                            </tr>
+                            <tr>
+                                <td>Controller Type</td>
+                                <td>PLC/Microprocessor</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>DOL/VFD/Soft starter (Optional)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -637,5 +1460,143 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+        function toggleChillerDetails(element) {
+            element.classList.toggle('expanded');
+            const specsContainer = element.querySelector('.chiller-card-specs');
+            if (specsContainer) {
+                specsContainer.classList.toggle('show');
+            }
+        }
+
+        function openChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('chillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeChillerModal() {
+            const modal = document.getElementById('chillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function openBrineChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('brineChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBrineChillerModal() {
+            const modal = document.getElementById('brineChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function openAirCooledChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('airCooledChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeAirCooledChillerModal() {
+            const modal = document.getElementById('airCooledChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function openBatchingChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('batchingChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBatchingChillerModal() {
+            const modal = document.getElementById('batchingChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function openAirCooledScrewChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('airCooledScrewChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeAirCooledScrewChillerModal() {
+            const modal = document.getElementById('airCooledScrewChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function openWaterCooledScrewChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('waterCooledScrewChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeWaterCooledScrewChillerModal() {
+            const modal = document.getElementById('waterCooledScrewChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        window.onclick = function(event) {
+            const chillerModal = document.getElementById('chillerModal');
+            const brineChillerModal = document.getElementById('brineChillerModal');
+            const airCooledChillerModal = document.getElementById('airCooledChillerModal');
+            const batchingChillerModal = document.getElementById('batchingChillerModal');
+            const airCooledScrewChillerModal = document.getElementById('airCooledScrewChillerModal');
+            const waterCooledScrewChillerModal = document.getElementById('waterCooledScrewChillerModal');
+            if (event.target === chillerModal) {
+                closeChillerModal();
+            }
+            if (event.target === brineChillerModal) {
+                closeBrineChillerModal();
+            }
+            if (event.target === airCooledChillerModal) {
+                closeAirCooledChillerModal();
+            }
+            if (event.target === batchingChillerModal) {
+                closeBatchingChillerModal();
+            }
+            if (event.target === airCooledScrewChillerModal) {
+                closeAirCooledScrewChillerModal();
+            }
+            if (event.target === waterCooledScrewChillerModal) {
+                closeWaterCooledScrewChillerModal();
+            }
+        }
+    </script>
 </body>
 </html>
