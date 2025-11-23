@@ -1,0 +1,12 @@
+{
+  "name": "it-company-website",
+  "version": "1.0.0",
+  "description": "IT Company Website - PHP project with Composer dependencies",
+  "scripts": {
+    "postinstall": "echo 'Note: This is a PHP project. Run composer install to install PHP dependencies.'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+

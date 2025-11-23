@@ -9,6 +9,18 @@ The project “IT Company Website” is a responsive website made using HTML, CS
 Go check this website!!
 https://priyansh42.github.io/IT-Company-Website/
 
+## Setup
+
+This is a PHP project that uses Composer for dependency management.
+
+### Install Dependencies
+
+```bash
+composer install
+```
+
+This will install PHPMailer and other PHP dependencies required by the project.
+
 ##
 
 __NOTE: Please be aware that the PHP Mailer feature is not functional on the deployed website. To utilize it, you'll need to download the entire project and run it locally on your computer using XAMPP or WAMP.__
