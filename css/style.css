@@ -1098,7 +1098,19 @@ body{
             margin-left: 1rem;
             margin-right: 2rem;
         }
-        
+
+        .projects-mobile-slider {
+            display: none;
+        }
+
+        .header .navbar {
+            transition: top 0.3s ease;
+        }
+
+        .header .fa-bars {
+            transition: transform 0.3s ease;
+        }
+
 @media (max-width: 1200px){
     .faq{
         min-height: 70vh;
