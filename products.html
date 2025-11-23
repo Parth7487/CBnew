@@ -822,5 +822,14 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+        function toggleChillerDetails(element) {
+            element.classList.toggle('expanded');
+            const specsContainer = element.querySelector('.chiller-card-specs');
+            if (specsContainer) {
+                specsContainer.classList.toggle('show');
+            }
+        }
+    </script>
 </body>
 </html>
