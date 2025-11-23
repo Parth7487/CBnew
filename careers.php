@@ -1,4 +1,4 @@
-<?php   
+<?php
     require("./mailing/mailfunction.php");
 
     $name = $_POST["name"];
@@ -12,20 +12,53 @@
 	$filetype = $_FILES["fileToUpload"]["type"];
 	$filesize = $_FILES["fileToUpload"]["size"];
 	$tempfile = $_FILES["fileToUpload"]["tmp_name"];
-	$filenameWithDirectory = "".$name.".pdf";  //give path of tmp-uploads folder(available in this project folder) with slash(/ or \ as per your path) at end of path
+	$filenameWithDirectory = "".$name.".pdf";
 
-    $body = "<ul><li>Name: ".$name."</li><li>Phone: ".$phone."</li><li>Email: ".$email."</li><li>Apply For: ".$applyfor."</li><li>Experience: ".$experience." Yrs.</li><li>Resume(Attached Below):</li></ul>";
+    $body = "<div style='font-family: Arial, sans-serif; padding: 20px; background-color: #f5f5f5;'>";
+    $body .= "<h2 style='color: #002e5f;'>New Career Application</h2>";
+    $body .= "<table style='width: 100%; border-collapse: collapse;'>";
+    $body .= "<tr style='background-color: #e8e8e8;'>";
+    $body .= "<td style='padding: 10px; font-weight: bold; border: 1px solid #ddd;'>Name:</td>";
+    $body .= "<td style='padding: 10px; border: 1px solid #ddd;'>".$name."</td>";
+    $body .= "</tr>";
+    $body .= "<tr>";
+    $body .= "<td style='padding: 10px; font-weight: bold; border: 1px solid #ddd;'>Phone:</td>";
+    $body .= "<td style='padding: 10px; border: 1px solid #ddd;'>".$phone."</td>";
+    $body .= "</tr>";
+    $body .= "<tr style='background-color: #e8e8e8;'>";
+    $body .= "<td style='padding: 10px; font-weight: bold; border: 1px solid #ddd;'>Email:</td>";
+    $body .= "<td style='padding: 10px; border: 1px solid #ddd;'><a href='mailto:".$email."'>".$email."</a></td>";
+    $body .= "</tr>";
+    $body .= "<tr>";
+    $body .= "<td style='padding: 10px; font-weight: bold; border: 1px solid #ddd;'>Apply For:</td>";
+    $body .= "<td style='padding: 10px; border: 1px solid #ddd;'>".$applyfor."</td>";
+    $body .= "</tr>";
+    $body .= "<tr style='background-color: #e8e8e8;'>";
+    $body .= "<td style='padding: 10px; font-weight: bold; border: 1px solid #ddd;'>Experience:</td>";
+    $body .= "<td style='padding: 10px; border: 1px solid #ddd;'>".$experience." Years</td>";
+    $body .= "</tr>";
+    $body .= "<tr>";
+    $body .= "<td style='padding: 10px; font-weight: bold; border: 1px solid #ddd; vertical-align: top;'>Additional Details:</td>";
+    $body .= "<td style='padding: 10px; border: 1px solid #ddd;'>".$otherdetails."</td>";
+    $body .= "</tr>";
+    $body .= "<tr style='background-color: #e8e8e8;'>";
+    $body .= "<td style='padding: 10px; font-weight: bold; border: 1px solid #ddd;'>Resume:</td>";
+    $body .= "<td style='padding: 10px; border: 1px solid #ddd;'>See attached file</td>";
+    $body .= "</tr>";
+    $body .= "</table>";
+    $body .= "</div>";
+
 	if(move_uploaded_file($tempfile, $filenameWithDirectory))
 	{
-		$status = mailfunction("", "Company", $body, $filenameWithDirectory); //reciever
+		$status = mailfunction("Sale@cbgloble.in", "CB GLOBLE INDIA", $body, $filenameWithDirectory);
         if($status)
-            echo '<center><h1>Thanks! We will contact you soon.</h1></center>';
+            echo '<center><h1 style="color: #00bfff; margin-top: 5rem;">Thank You for Applying!</h1><p style="font-size: 1.2rem; color: #333;">We have received your application and will contact you soon.</p></center>';
         else
-            echo '<center><h1>Error sending message! Please try again.</h1></center>';
+            echo '<center><h1 style="color: #ff6b6b; margin-top: 5rem;">Error sending application!</h1><p style="font-size: 1.2rem; color: #333;">Please try again or contact us at Sale@cbgloble.in or +91 97244 00442</p></center>';
 	}
-	else 
+	else
 	{
-		echo "<center><h1>Error uploading file! Please try again.</h1></center>";
+		echo "<center><h1 style='color: #ff6b6b; margin-top: 5rem;'>Error uploading file!</h1><p style='font-size: 1.2rem; color: #333;'>Please try again.</p></center>";
 	}
 
 ?>

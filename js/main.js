@@ -17,6 +17,24 @@ $(document).ready(function(){
         {
             $('.header').css({'background':'none','box-shadow':'none'});
         }
+
+        // Scroll animation for items
+        $('.item').each(function(){
+            var elementPos = $(this).offset().top;
+            var viewportBottom = $(window).scrollTop() + $(window).height();
+            if(elementPos < viewportBottom){
+                $(this).addClass('fade-in');
+            }
+        });
+
+        // Scroll animation for service cards
+        $('.service-card').each(function(){
+            var elementPos = $(this).offset().top;
+            var viewportBottom = $(window).scrollTop() + $(window).height();
+            if(elementPos < viewportBottom){
+                $(this).addClass('fade-in');
+            }
+        });
     });
 
     const counters = document.querySelectorAll('.counter');
@@ -73,5 +91,83 @@ $('.accordion-header').click(function(){
     $('.accordion .accordion-header span').text('+');
     $(this).children('span').text('-');
 });
+
+// Smooth scroll for navigation links
+$('a[href^="#"]').on('click', function(e){
+    e.preventDefault();
+    var target = $(this.getAttribute('href'));
+    if(target.length){
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top - 80
+        }, 1000, 'easeInOutExpo');
+    }
+});
+
+// Counter animation with intersection observer
+const observerOptions = {
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            const counter = entry.target.querySelector('.counter');
+            if(counter && !counter.classList.contains('counted')){
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / 120;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target;
+                        counter.classList.add('counted');
+                    }
+                };
+                updateCount();
+            }
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.counters > div').forEach(el => {
+    observer.observe(el);
+});
+
+// Add hover effects to service items
+$('.item').hover(
+    function(){
+        $(this).css('cursor', 'pointer');
+    },
+    function(){
+        $(this).css('cursor', 'default');
+    }
+);
+
+// Navbar link active state
+$('.navbar a').on('click', function(){
+    $('.navbar a').removeClass('active');
+    $(this).addClass('active');
+});
+
+// Performance optimization: Lazy loading for images
+if('IntersectionObserver' in window){
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
 
 });
