@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CB GLOBLE INDIA</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="./images/image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <script src="./js/main.js"></script>
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            padding: 60px 20px;
+            background: #f9f9f9;
+        }
+
+        .about-section h2 {
+            color: #002e5f;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .about-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #00bfff;
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #00bfff;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-card h3 {
+            color: #002e5f;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-top: 3px solid #00bfff;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+        }
+
+        .project-card h4 {
+            color: #002e5f;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .project-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .vision-section {
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .vision-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .vision-section h2::after {
+            background: white;
+        }
+
+        .vision-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .why-us-section {
+            padding: 60px 20px;
+        }
+
+        .highlight-list {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .highlight-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .highlight-list li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight-list i {
+            color: #00bfff;
+            font-size: 1.3rem;
+            margin-right: 15px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .highlight-list p {
+            margin: 0;
+            color: #333;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-content {
+                padding: 20px;
+            }
+
+            .project-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><img src="https://cdn.builder.io/api/v1/image/assets%2Fd8e02672997f4ffe9f152e4700691632%2F85dd3067190f4ec7bb1bea1e0a6a51bf?format=webp&width=800" alt="CB GLOBLE INDIA" style="height: 8rem; width: auto;"></a>
+        <div class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html#home">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="consultancy.html">consultancy</a></li>
+                <li><a href="products.html">products</a></li>
+                <li><a href="index.html#portfolio">projects</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <h1>About CB Globle India</h1>
+        <p>Pioneering Industrial Solutions Since 2012</p>
+    </div>
+
+    <!-- Company Overview -->
+    <section class="about-section">
+        <div class="container">
+            <h2>Our Journey & Mission</h2>
+            <div class="about-content">
+                <p>Since 2012, CB Globle India has been a trusted name in industrial management and innovative solutions, specializing in the plastics sector—particularly blow molding, injection molding, and extrusion operations. With over 25 years of combined industry expertise, our technical and managerial teams are equipped to deliver exceptional consultancy, technical guidance, and project management services tailored to your unique industrial needs.</p>
+                
+                <p>Our founder's background in mechanical engineering and extensive professional experience with leading companies in water tanks and pipes manufacturing fuels our commitment to quality and innovation. At CB Globle India, we emphasize a complete partnership approach—from initial design and machinery procurement to installation, commissioning, and ongoing operational optimization—ensuring your manufacturing units run efficiently and produce high-quality outputs.</p>
+                
+                <p>We proudly collaborate with top machine and mold manufacturers across India, Taiwan, Germany, and China, tailoring solutions that best fit client requirements and industry standards. Our dedication is rooted in delivering competitive pricing without compromising on product excellence, ensuring maximum customer satisfaction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section class="about-section" style="background: white; padding: 60px 20px;">
+        <div class="container">
+            <h2>Our Core Services</h2>
+            <div class="about-grid">
+                <div class="service-card">
+                    <h3><i class="fa fa-cogs" style="color: #00bfff; margin-right: 10px;"></i>Machinery & Procurement</h3>
+                    <p>Procurement and supply of specialized plastic machinery, molds, and utilities aligned with your production requirements.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fa fa-wrench" style="color: #00bfff; margin-right: 10px;"></i>Erection & Commissioning</h3>
+                    <p>Professional erection, installation, and commissioning of machines with comprehensive technical support.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fa fa-users" style="color: #00bfff; margin-right: 10px;"></i>Workforce Recruitment</h3>
+                    <p>Workforce recruitment aligned with job descriptions and operational needs for your manufacturing facility.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fa fa-graduation-cap" style="color: #00bfff; margin-right: 10px;"></i>Training & Consulting</h3>
+                    <p>Implementation and training on ISO standards, GMP, and LEAN manufacturing principles for operational excellence.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fa fa-line-chart" style="color: #00bfff; margin-right: 10px;"></i>Process Optimization</h3>
+                    <p>Technical consulting and operational optimization for blow, injection, and extrusion molding operations.</p>
+                </div>
+                <div class="service-card">
+                    <h3><i class="fa fa-shield" style="color: #00bfff; margin-right: 10px;"></i>Annual Maintenance</h3>
+                    <p>Annual Maintenance Contracts (AMC) and ongoing technical support for all machinery and equipment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us-section">
+        <div class="container">
+            <h2 style="color: #002e5f; font-size: 2.5rem; margin-bottom: 30px; text-align: center; position: relative; display: inline-block; width: 100%;">
+                Why Choose CB Globle India
+                <span style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: #00bfff; display: block;"></span>
+            </h2>
+            <div class="highlight-list">
+                <ul>
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        <p><strong>25+ Years of Industry Expertise:</strong> Decades of combined experience in plastics manufacturing and industrial consultancy.</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        <p><strong>720+ Completed Projects:</strong> Proven track record of successful project delivery across India and international markets.</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        <p><strong>Global Partnerships:</strong> Collaboration with leading manufacturers in India, Taiwan, Germany, and China for best solutions.</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        <p><strong>Complete Turnkey Solutions:</strong> End-to-end support from design and procurement to commissioning and optimization.</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        <p><strong>Competitive Pricing:</strong> Premium quality solutions at competitive rates ensuring maximum customer satisfaction.</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        <p><strong>Expert Team:</strong> Technical and managerial professionals with deep knowledge of plastics manufacturing sector.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Projects -->
+    <section class="about-section" style="background: #f9f9f9;">
+        <div class="container">
+            <h2>Notable Projects & Clients</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <h4>Quant Solar</h4>
+                    <p>Development and ongoing consultation of solar floats, covering design to production, servicing the entire Indian market for over eight years.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Garden's Need</h4>
+                    <p>Management and process optimization for one of India's largest plastic flower pot manufacturers, encompassing multiple molding techniques.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Belle Laboratories</h4>
+                    <p>Ground-up project implementation and expansion planning for medium packaging solutions.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Pyramid Technoplast Ltd.</h4>
+                    <p>Comprehensive technical guidance and management recruitment for an IBC packaging project.</p>
+                </div>
+                <div class="project-card">
+                    <h4>KLJ Group Thailand</h4>
+                    <p>Complete consultation from layout design to machinery installation and production launch for rigid packaging.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Suntek Chloride</h4>
+                    <p>Greenfield chemical packaging project covering drum manufacturing and injection for closures, ongoing after one year.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Hi-Tech Corporation</h4>
+                    <p>Delivery of medium and large-scale packaging projects with complete technical support.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Prakash Pipe Kashipur</h4>
+                    <p>End-to-end consultancy for rigid plastic packaging from 20L to 210L capacity over a year.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Ekaansh Polymer</h4>
+                    <p>Complete turnkey project for 210L rigid packaging from inception to commercial production.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Adinath Agro & Others</h4>
+                    <p>Diverse packaging solutions for FMCG and specialty industries including Mpg Poly-Container (Delhi), Arch Tech (Pune), Shreeji Poly-Container, and Deep Polymers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <div class="vision-section">
+        <h2>Our Vision for the Future</h2>
+        <div class="vision-content">
+            <p>To be a leading industrial management and consulting provider in the plastic manufacturing domain, enabling clients to achieve operational excellence, innovative product solutions, and sustained growth through expert guidance and strategic partnerships.</p>
+            <p style="margin-top: 30px; font-size: 1.1rem;">We are committed to continuous innovation, sustainability, and delivering value that extends beyond our initial engagement to ensure long-term success for our clients.</p>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="communicate" style="margin-top: 0;">
+        <h3>Ready to Transform Your Manufacturing Operations?</h3>
+        <p>Get in touch with our expert team today</p>
+        <a href="index.html#faq"><button class="btn">Learn More</button></a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>About Us</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Home</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="about.html">About us</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="consultancy.html">Consultancy</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="products.html">Products</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio">Projects</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Services</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="careers.html">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-contact" style="font-size: 1.5rem;">
+                        <h4>Contact Us</h4>
+                        <p>
+                            CB GLOBLE INDIA<br>
+                            Industrial Management & Consultancy<br>
+                            Flat No 206 Vapi Jagdish Co.op. Hsg. Society<br>
+                            Vapi, Valsad-396195, Gujarat, India<br>
+                            <strong>Phone:</strong> +91 97244 00442<br>
+                            <strong>Email:</strong> <a href="mailto:Sale@cbgloble.in" style="color: #00bfff; text-decoration: none;">Sale@cbgloble.in</a><br>
+                            <strong>WhatsApp:</strong> <a href="https://wa.me/919724400442" style="color: #25D366; text-decoration: none;">+91 97244 00442</a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-newsletter">
+                        <h4>Quick Links</h4>
+                        <p>Explore our services and get in touch with us today for comprehensive industrial solutions.</p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service" style="color: #fff; text-decoration: none;">Services</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#portfolio" style="color: #fff; text-decoration: none;">Projects</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq" style="color: #fff; text-decoration: none;">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 copyright" style="color: #fff; font-size: 1.3rem;">
+                    Copyright &copy; 2024 CB GLOBLE INDIA. All Rights Reserved.
+                </div>
+                <div class="col-md-6" style="color: #fff; font-size: 1.3rem; text-align: right;">
+                    Designed and Developed by <a href="https://shopifydevstudio.tech" style="color: #00bfff; text-decoration: none;">shopifydevstudio.tech</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+
+    <!-- WhatsApp Popup Widget -->
+    <div class="whatsapp-widget">
+        <button class="whatsapp-button" id="whatsappBtn" title="Chat with us">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="popup-header">
+                <h4>How can we help?</h4>
+                <button class="popup-close" id="closePopup">&times;</button>
+            </div>
+            <div class="popup-content">
+                <p>Get in touch with us via WhatsApp or download our product catalog.</p>
+                <a href="https://wa.me/919724400442?text=Hello%20CB%20Globle%20India%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services" class="popup-link whatsapp-link">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="#" class="popup-link catalog-link" id="catalogDownload">
+                    <i class="fa fa-download"></i> Download Catalog
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            const whatsappPopup = document.getElementById('whatsappPopup');
+            const closePopup = document.getElementById('closePopup');
+            const catalogDownload = document.getElementById('catalogDownload');
+
+            whatsappBtn.addEventListener('click', function() {
+                whatsappPopup.classList.toggle('show');
+            });
+
+            closePopup.addEventListener('click', function() {
+                whatsappPopup.classList.remove('show');
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.whatsapp-widget')) {
+                    whatsappPopup.classList.remove('show');
+                }
+            });
+
+            catalogDownload.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Catalog download will be available soon. Please contact us on WhatsApp for the catalog.');
+            });
+        });
+    </script>
+</body>
+</html>
