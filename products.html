@@ -397,6 +397,168 @@
             min-height: auto;
         }
 
+        .chiller-specs-btn {
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+        }
+
+        .chiller-specs-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+        }
+
+        .chiller-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .chiller-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .chiller-modal-content {
+            background-color: #fefefe;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+            position: relative;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .chiller-modal-close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #002e5f;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .chiller-modal-close:hover {
+            color: #00bfff;
+            transform: scale(1.2);
+        }
+
+        .chiller-modal-content h2 {
+            color: #002e5f;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .chiller-specs-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .chiller-specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        .chiller-specs-table th,
+        .chiller-specs-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .chiller-specs-table th {
+            background-color: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+        }
+
+        .chiller-specs-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        .chiller-specs-table tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .chiller-specs-table td:first-child {
+            font-weight: 600;
+            color: #002e5f;
+            width: 35%;
+        }
+
+        @media (max-width: 768px) {
+            .chiller-modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+
+            .chiller-modal-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .chiller-specs-table th,
+            .chiller-specs-table td {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .chiller-modal-close {
+                right: 1rem;
+                top: 1rem;
+                font-size: 1.5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             .products-hero h1 {
                 font-size: 2rem;
