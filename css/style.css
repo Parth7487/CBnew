@@ -12,6 +12,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 html{
     font-size: 62.5%;
 }
