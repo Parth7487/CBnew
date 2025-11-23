@@ -17,6 +17,24 @@ $(document).ready(function(){
         {
             $('.header').css({'background':'none','box-shadow':'none'});
         }
+
+        // Scroll animation for items
+        $('.item').each(function(){
+            var elementPos = $(this).offset().top;
+            var viewportBottom = $(window).scrollTop() + $(window).height();
+            if(elementPos < viewportBottom){
+                $(this).addClass('fade-in');
+            }
+        });
+
+        // Scroll animation for service cards
+        $('.service-card').each(function(){
+            var elementPos = $(this).offset().top;
+            var viewportBottom = $(window).scrollTop() + $(window).height();
+            if(elementPos < viewportBottom){
+                $(this).addClass('fade-in');
+            }
+        });
     });
 
     const counters = document.querySelectorAll('.counter');
