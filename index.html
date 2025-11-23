@@ -329,21 +329,20 @@
     </div>
 </div>
 <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
-<script src="lib/jquery/jquery.min.js" defer></script>
-<script src="lib/jquery/jquery-migrate.min.js" defer></script>
-<script src="lib/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-<script src="lib/easing/easing.min.js" defer></script>
-<script src="lib/waypoints/waypoints.min.js" defer></script>
-<script src="lib/counterup/counterup.min.js" defer></script>
-<script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
-<script src="lib/lightbox/js/lightbox.min.js" defer></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="./js/main.js"></script>
 <script>
-    window.addEventListener('load', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         const preloader = document.getElementById('preloader');
         if(preloader) {
-            setTimeout(() => {
-                preloader.classList.add('hidden');
-            }, 500);
+            preloader.classList.add('hidden');
         }
     });
 </script>
