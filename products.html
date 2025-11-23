@@ -1170,10 +1170,31 @@
             }
         }
 
+        function openBrineChillerModal(event) {
+            event.stopPropagation();
+            const modal = document.getElementById('brineChillerModal');
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeBrineChillerModal() {
+            const modal = document.getElementById('brineChillerModal');
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
         window.onclick = function(event) {
-            const modal = document.getElementById('chillerModal');
-            if (event.target === modal) {
+            const chillerModal = document.getElementById('chillerModal');
+            const brineChillerModal = document.getElementById('brineChillerModal');
+            if (event.target === chillerModal) {
                 closeChillerModal();
+            }
+            if (event.target === brineChillerModal) {
+                closeBrineChillerModal();
             }
         }
     </script>
