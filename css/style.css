@@ -1033,10 +1033,10 @@ body{
         }
 
         .faq{
-            min-height: 70vh;
+            min-height: auto;
             width: 100vw;
             text-align: center;
-            padding: 0 2rem;
+            padding: 4rem 2rem;
             background: url(../images/faq.jpg);
             background-repeat: no-repeat;
             background-size: cover;
