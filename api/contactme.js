@@ -89,7 +89,21 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { name, phone, email, message } = req.body;
+    // Handle both JSON and form-urlencoded data
+    let body = req.body;
+    
+    // If body is a string (form-urlencoded), parse it
+    if (typeof body === 'string') {
+      const params = new URLSearchParams(body);
+      body = {
+        name: params.get('name'),
+        phone: params.get('phone'),
+        email: params.get('email'),
+        message: params.get('message')
+      };
+    }
+
+    const { name, phone, email, message } = body;
 
     // Validate required fields
     if (!name || !phone || !email || !message) {
