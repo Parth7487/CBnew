@@ -1,7 +1,7 @@
 {
   "buildCommand": "echo 'No build step required for static site'",
   "outputDirectory": ".",
-  "installCommand": "echo 'No dependencies to install'",
+  "installCommand": "npm install",
   "env": {
     "NODE_ENV": "production"
   },
