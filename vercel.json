@@ -7,7 +7,10 @@
   },
   "functions": {
     "contactme.php": {
-      "runtime": "php@8.2"
+      "runtime": "@vercel/php@1.0.0"
+    },
+    "careers.php": {
+      "runtime": "@vercel/php@1.0.0"
     }
   },
   "headers": [
