@@ -1,10 +1,13 @@
 {
   "name": "it-company-website",
   "version": "1.0.0",
-  "description": "IT Company Website - PHP project with Composer dependencies",
+  "description": "IT Company Website with Node.js API routes",
   "scripts": {
-    "postinstall": "echo 'Note: This is a PHP project. Run composer install to install PHP dependencies.'",
     "dev": "npx serve -l 3000"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7",
+    "formidable": "^3.5.1"
   },
   "keywords": [],
   "author": "",
