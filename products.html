@@ -2043,6 +2043,61 @@
                 }
             });
         });
+
+        function openMachineryModal(modalId) {
+            const modalMap = {
+                'vTypeGranulator': 'vTypeGranuatorModal',
+                'flakeTypeGranulator': 'flakeTypeGranuatorModal',
+                'gbSeriesGranulator': 'gbSeriesGranuatorModal',
+                'mediumSpeedGranulator': 'mediumSpeedGranuatorModal',
+                'euroHopperDryer': 'euroHopperDryerModal',
+                'standardHopperDryer': 'standardHopperDryerModal',
+                'euroAutoLoader': 'euroAutoLoaderModal',
+                'standardHopperLoader': 'standardHopperLoaderModal',
+                'vacuumHopperLoader': 'vacuumHopperLoaderModal',
+                'autoCollectingSystem': 'autoCollectingSystemModal',
+                'powderSiftingDevice': 'powderSiftingDeviceModal'
+            };
+
+            const actualModalId = modalMap[modalId];
+            const modal = document.getElementById(actualModalId);
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMachineryModal(modalId) {
+            const modalMap = {
+                'vTypeGranulator': 'vTypeGranuatorModal',
+                'flakeTypeGranulator': 'flakeTypeGranuatorModal',
+                'gbSeriesGranulator': 'gbSeriesGranuatorModal',
+                'mediumSpeedGranulator': 'mediumSpeedGranuatorModal',
+                'euroHopperDryer': 'euroHopperDryerModal',
+                'standardHopperDryer': 'standardHopperDryerModal',
+                'euroAutoLoader': 'euroAutoLoaderModal',
+                'standardHopperLoader': 'standardHopperLoaderModal',
+                'vacuumHopperLoader': 'vacuumHopperLoaderModal',
+                'autoCollectingSystem': 'autoCollectingSystemModal',
+                'powderSiftingDevice': 'powderSiftingDeviceModal'
+            };
+
+            const actualModalId = modalMap[modalId];
+            const modal = document.getElementById(actualModalId);
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.querySelectorAll('.machinery-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
     </script>
 </body>
 </html>
