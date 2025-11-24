@@ -113,7 +113,7 @@ body{
     top: 0;
     left: 0;
     z-index: 100;
-    position: fixed;
+    background: transparent;
 }
 
 .header .logo img{
@@ -958,6 +958,18 @@ body{
         .footer .footer-top .footer-contact p {
             color: #ffffff;
             line-height: 26px;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer .footer-top .footer-contact {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .footer .footer-top .footer-contact h4 {
+            margin-bottom: 20px;
         }
         
         .footer .footer-top .footer-newsletter input[type="email"] {
@@ -1033,10 +1045,10 @@ body{
         }
 
         .faq{
-            min-height: 70vh;
+            min-height: auto;
             width: 100vw;
             text-align: center;
-            padding: 0 2rem;
+            padding: 4rem 2rem;
             background: url(../images/faq.jpg);
             background-repeat: no-repeat;
             background-size: cover;
@@ -1113,7 +1125,8 @@ body{
 
 @media (max-width: 1200px){
     .faq{
-        min-height: 70vh;
+        min-height: auto;
+        padding: 3rem 2rem;
     }
 }        
 
