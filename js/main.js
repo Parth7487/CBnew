@@ -11,11 +11,11 @@ $(document).ready(function(){
 
         if($(window).scrollTop()>35)
         {
-            $('.header').css({'background':'#002e5f','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
+            $('.header').css({'background':'rgba(0, 46, 95, 0.95)','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
         }
         else
         {
-            $('.header').css({'background':'none','box-shadow':'none'});
+            $('.header').css({'background':'transparent','box-shadow':'none'});
         }
 
         // Scroll animation for items
