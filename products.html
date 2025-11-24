@@ -590,6 +590,199 @@
             box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
         }
 
+        .machinery-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #00bfff;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .machinery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-top-color: #002e5f;
+        }
+
+        .machinery-card-image {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+        }
+
+        .machinery-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .machinery-card:hover .machinery-card-image img {
+            transform: scale(1.05);
+        }
+
+        .machinery-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .machinery-card-title {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #002e5f;
+            margin-bottom: 0.5rem;
+        }
+
+        .machinery-card-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0.5rem 0 1rem 0;
+            flex-grow: 1;
+        }
+
+        .machinery-specs-btn {
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .machinery-specs-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+        }
+
+        .machinery-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .machinery-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .machinery-modal-content {
+            background-color: #fefefe;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+            position: relative;
+        }
+
+        .machinery-modal-close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #002e5f;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .machinery-modal-close:hover {
+            color: #00bfff;
+            transform: scale(1.2);
+        }
+
+        .machinery-modal-content h2 {
+            color: #002e5f;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .machinery-modal-image-wrapper {
+            width: 100%;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .machinery-modal-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 400px;
+            object-fit: contain;
+        }
+
+        .machinery-features-section {
+            margin-bottom: 2rem;
+        }
+
+        .machinery-features-section h3 {
+            color: #00bfff;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .machinery-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .machinery-features-list li {
+            padding: 0.8rem 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .machinery-features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .machinery-features-list li::before {
+            content: '✓ ';
+            color: #00bfff;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
         .cta-section {
             background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
             color: white;
@@ -665,6 +858,31 @@
 
             .gallery-modal-content h2 {
                 font-size: 1.3rem;
+            }
+
+            .machinery-card-image {
+                height: 220px;
+            }
+
+            .machinery-modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+
+            .machinery-modal-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .machinery-card-title {
+                font-size: 1rem;
+            }
+
+            .machinery-card-description {
+                font-size: 0.85rem;
+            }
+
+            .machinery-modal-image-wrapper img {
+                max-height: 300px;
             }
         }
     </style>
@@ -977,6 +1195,136 @@
                     </div>
                 </div>
             </div>
+
+            <div class="product-category">
+                <h2 class="category-title"><i class="fas fa-cogs"></i> Plastic Auxiliary Machines</h2>
+                <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; line-height: 1.8;">
+                    Advanced industrial machinery solutions for plastic processing, recycling, and material handling with precision engineering and safety features.
+                </p>
+
+                <div class="product-grid">
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F13e1f4d289914bcfb845c1f2657b1ff3?format=webp&width=800" alt="NG-GV800 V Type Granulator">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">V Type Granulator (NG-GV800)</h3>
+                            <p class="machinery-card-description">High-efficiency plastic granulator with unique scissors-type cutting structure for superior material processing.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('vTypeGranulator')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2Fb37dc83985214dc28f90a1fde6575956?format=webp&width=800" alt="Flake Type Granulator">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Flake Type Granulator</h3>
+                            <p class="machinery-card-description">Specialized flake blade design for crushing general plastics, sheets, tubes, and profiles with precision.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('flakeTypeGranulator')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F2e6c5e37f3754d4085c6b3b5dc660a11?format=webp&width=800" alt="GB Series Granulator">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">GB Series Granulator</h3>
+                            <p class="machinery-card-description">Patent-designed front-positioning blade system optimized for hollow materials like bottles and barrels.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('gbSeriesGranulator')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F69c800cea5884df09ce70aa0ab3f67c2?format=webp&width=800" alt="Medium Speed Granulator NG-GM">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Medium Speed Granulator (NG-GM)</h3>
+                            <p class="machinery-card-description">NG-GM series designed for instant recycling of sprues and runners with minimal noise and powder generation.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('mediumSpeedGranulator')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F8eda793fe83f43fdbf3fff76d2b6a552?format=webp&width=800" alt="Euro-Hopper Dryer NG Series">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Euro-Hopper Dryer (NG Series)</h3>
+                            <p class="machinery-card-description">Hot air down-blowing design with double-layer insulation for efficient engineering plastic drying.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('euroHopperDryer')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2Fc499d26c1db741ac9a8ec9a1a0d124b5?format=webp&width=800" alt="Standard Hopper Dryer">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Standard Hopper Dryer</h3>
+                            <p class="machinery-card-description">High-performance hot air diffusion with precision temperature control and 24-hour automatic operation.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('standardHopperDryer')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F47572d3ef939452e862a365f3706ede3?format=webp&width=800" alt="Euro-Auto Loader 300G">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Euro-Auto Loader</h3>
+                            <p class="machinery-card-description">Carbon brush motor system with cable remote controller and cloth-type filter with auto-cleaning function.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('euroAutoLoader')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F3dedaf37905e4b0296c626d4c086f98b?format=webp&width=800" alt="Standard Self-Contained Hopper Loader 300G">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Standard Self-Contained Hopper Loader</h3>
+                            <p class="machinery-card-description">Compact design with low weight, wire-controlled operation and material shortage alarm features.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('standardHopperLoader')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F13ec23c0301743059d26e0b97be0b858?format=webp&width=800" alt="Standard Separate Vacuum Hopper Loader">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Separate Vacuum Hopper Loader</h3>
+                            <p class="machinery-card-description">Independent filter design for easy maintenance, microcomputer control with automatic dust removal capability.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('vacuumHopperLoader')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F5cffcdf2dd574d129ceff113b7f359e3?format=webp&width=800" alt="Granulator Auto Collecting System">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Granulator Auto Collecting System</h3>
+                            <p class="machinery-card-description">Compatible with all granulator series, automatic material collecting without manual involvement.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('autoCollectingSystem')">View Features</button>
+                        </div>
+                    </div>
+
+                    <div class="machinery-card">
+                        <div class="machinery-card-image">
+                            <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F32095734138144ca99800991c7902fe9?format=webp&width=800" alt="Auto Powder Sifting Device">
+                        </div>
+                        <div class="machinery-card-content">
+                            <h3 class="machinery-card-title">Auto Powder Sifting Device</h3>
+                            <p class="machinery-card-description">Automatically separates powder from granulated output with vacuum suction and dust removal function.</p>
+                            <button class="machinery-specs-btn" onclick="openMachineryModal('powderSiftingDevice')">View Features</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1160,6 +1508,309 @@
                     <tr><td>Controller Type</td><td>PLC/Microprocessor</td></tr>
                     <tr><td>Starter</td><td>DOL/VFD/Soft starter (Optional)</td></tr>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Machinery Modals -->
+    <div id="vTypeGranuatorModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('vTypeGranulator')">&times;</button>
+            <h2>V Type Granulator (NG-GV800) - Features & Specifications</h2>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Unique scissors type structure, conductive to improve cutting efficiency</li>
+                    <li>Feeding hopper with back and front double layered insulation for effective noise handling</li>
+                    <li>Blades are made of high-strength alloy tool steel, with high hardness, good abrasion resistance, and long durability</li>
+                    <li>Equipped with multiple safety protection devices to ensure safe operation</li>
+                    <li>&gt;30HP default with chamber cooling system, effectively reducing the heat of chamber and shaft to ensure long durability and preventing material melting and fusion</li>
+                    <li>&gt;100HP with high-quality self-aligning bearings with excellent lifetime running</li>
+                    <li>&gt;75HP with cylinder system on feeding hopper and mesh screen, optional for other models as well</li>
+                    <li>Suitable for all kinds of large-scale hollow products, leather, PE film, PET bottles, etc.</li>
+                    <li>Optional auto collecting and dust separating system for better collecting purposes</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Standard Application</h3>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">The NG-GV800 is specifically designed for high-volume plastic waste processing and industrial granulation applications with precision engineering and multiple safety features built in for continuous operation.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="flakeTypeGranuatorModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('flakeTypeGranulator')">&times;</button>
+            <h2>Flake Type Granulator - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2Fb37dc83985214dc28f90a1fde6575956?format=webp&width=800" alt="Flake Type Granulator">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Flake type blade design, suitable for crushing general plastics like sheets, tube, profiles and packing materials, also runners, etc.</li>
+                    <li>Feeding hopper with back and front double layered insulation for effective noise handling</li>
+                    <li>Blades are made of high-strength alloy tool steel, with high hardness, good abrasion resistance, and long durability</li>
+                    <li>Equipped with multiple safety protection devices to ensure safe operation</li>
+                    <li>&gt;30HP default with chamber cooling system, effectively reducing the heat of chamber and shaft to ensure long durability and preventing material melting and fusion</li>
+                    <li>&gt;100HP with high-quality self-aligning bearings with excellent lifetime running</li>
+                    <li>&gt;75HP with cylinder system on feeding hopper and mesh screen, optional for other models as well</li>
+                    <li>Suitable for all kinds of large-scale hollow products, leather, PE film, PET bottles, etc.</li>
+                    <li>Optional auto collecting and dust separating system for better collecting purposes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="gbSeriesGranuatorModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('gbSeriesGranulator')">&times;</button>
+            <h2>GB Series Granulator - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F2e6c5e37f3754d4085c6b3b5dc660a11?format=webp&width=800" alt="GB Series Granulator">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Special patent front-positioning blade design especially for hollow material like bottles and barrels, the special angle and chamber design leading the crushing subject into rotary cutting center, with large cutting angle, excellent efficiency, even flake output and less powder occurred</li>
+                    <li>Feeding hopper with double-layered on 4 sides and the inner layer is made of stainless steel with insulation material in between to provide good noise handling</li>
+                    <li>Blades are made of high-strength alloy tool steel, with high hardness, good abrasion resistance, and long durability</li>
+                    <li>Adopted hexagon socket screw installation way of the blades, free from wearing lose on screws in long term utility</li>
+                    <li>&gt;75HP with high-quality self-aligning bearings with excellent lifetime running</li>
+                    <li>&gt;75HP with cylinder system on feeding hopper and mesh screen, optional for other models as well</li>
+                    <li>Patent designed foot stands with heavy duty capability and low vibration in running</li>
+                    <li>Optional for auto collecting and dust separating system for better collecting purposes</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="mediumSpeedGranuatorModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('mediumSpeedGranulator')">&times;</button>
+            <h2>Medium Speed Granulator (NG-GM Series) - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F69c800cea5884df09ce70aa0ab3f67c2?format=webp&width=800" alt="Medium Speed Granulator NG-GM">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>NG-GM medium speed series granulators are applied for instant recycling materials of sprues, runners, insufficient products, which is easy to operate and with excellent functions</li>
+                    <li>The speed is properly designed to minimize powder, running noise and abrasion of cutter blades occurred in crushing process</li>
+                    <li>The series are adopted with multiple safety devices to conform European safety standards</li>
+                    <li>Small footprint and machine size, saving space and easy to fit facilities</li>
+                    <li>Convenient on maintenance and cleaning, safety design for operations</li>
+                    <li>Blade sets made by once cutting from steel plate, adopted with patent front-positioning blades design enlarging cutting angle and increasing cutting efficiency</li>
+                    <li>Hence the output granules are even and with less powder or dust occurred</li>
+                    <li>Blades are made of high-strength alloy tool steel, with high hardness, good abrasion resistance, and long durability</li>
+                    <li>Adopted hexagon socket screw installation way of the blades, free from wearing lose on screws in long term utility</li>
+                    <li>Feeding hopper with double-layered on 4 sides and the inner layer is made of stainless steel with insulation material in between to provide good noise handling</li>
+                    <li>Configuration is optional on active or passive collecting</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Installation & Technical Details</h3>
+                <div class="machinery-modal-image-wrapper" style="margin-top: 1.5rem;">
+                    <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F2d2a2f085bf14091b73296d5b2774979?format=webp&width=800" alt="NG-GM Installation Diagram">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="euroHopperDryerModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('euroHopperDryer')">&times;</button>
+            <h2>Euro-Hopper Dryer (NG Series) - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F8eda793fe83f43fdbf3fff76d2b6a552?format=webp&width=800" alt="Euro-Hopper Dryer NG Series">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Description</h3>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">The NG series are equipped with stainless steel door, hot air downward-blowing, cyclone exhaust and double layer insulated hopper, which are ideally suitable for drying engineering plastics with a dehumidifier and provides a variety of capacities for selection.</p>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Industry-leading LCD display microcomputer controller, temperature control accuracy can reach ±0.1℃</li>
+                    <li>Hot air down-blowing design ensures even distribution of hot air to maintain a steady temperature in the hopper and increase drying efficiency</li>
+                    <li>With over-temperature trip protection device, it can reduce accidents caused by man-made or mechanical failures</li>
+                    <li>Double-layer thermal insulation design, the inter layer adopts high-quality thick thermal insulation materials, which can ensure even temperature and less heat loss, more energy-saving and environmentally friendly</li>
+                    <li>The contact parts of the raw materials are all made of stainless steel to ensure that the raw materials are not polluted</li>
+                    <li>Digital timing for 24 hours a week to realize automatic operation</li>
+                    <li>NG-80U and above models adopt a checking door, which has good tightness and convenient for material cleaning</li>
+                    <li>NG-1200U and smaller models are equipped with stainless steel pallets and bases as standard</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Optional Accessories &amp; Configurations</h3>
+                <ul class="machinery-features-list">
+                    <li>Euro suction box</li>
+                    <li>Euro support frame</li>
+                    <li>Magnetic stand</li>
+                    <li>Magnetic base (aluminum or stainless steel type)</li>
+                    <li>Blower inlet filter</li>
+                    <li>Hot air recycling</li>
+                    <li>Exhaust air filter</li>
+                    <li>Standard ladder above NG-300U</li>
+                    <li>Optional frame support under NG-900U</li>
+                    <li>Stand frame are standard for NG-1200U and above</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="standardHopperDryerModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('standardHopperDryer')">&times;</button>
+            <h2>Standard Hopper Dryer - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2Fc499d26c1db741ac9a8ec9a1a0d124b5?format=webp&width=800" alt="Standard Hopper Dryer">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Adopting high-performance hot air diffusion device design to ensure uniform temperature and improve drying efficiency</li>
+                    <li>The barrel and internal parts are made of stainless steel to ensure that the raw materials are not polluted</li>
+                    <li>Precision die cast aluminum shell with smooth surface and good thermal insulation performance</li>
+                    <li>Electric barrel bending design, to avoid combustion caused by raw material powder accumulation at the bottom of the barrel</li>
+                    <li>Industry leading LCD microcomputer controller with temperature control accuracy of ± 0.1 ℃</li>
+                    <li>Equipped with the 24-hour automatic timing device to realize automatic operation of the whole machine by appointment</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Optional Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Optional high temperature type</li>
+                    <li>Optional double-layer insulation type</li>
+                    <li>Optional hot air recovery system for use, which is more energy-saving and environmentally friendly</li>
+                    <li>Optional RS485 communication, to realize remote automatic control</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Additional Images</h3>
+                <div class="machinery-modal-image-wrapper" style="margin-top: 1.5rem;">
+                    <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2Fa27b088cb49f40dda0302b998082902d?format=webp&width=800" alt="Standard Hopper Dryer Alternative View">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="euroAutoLoaderModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('euroAutoLoader')">&times;</button>
+            <h2>Euro-Auto Loader - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F47572d3ef939452e862a365f3706ede3?format=webp&width=800" alt="Euro-Auto Loader 300G">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Adopted carbon brush motor for high rotating speed, large air volume, small size, convenient to move, and easy to install</li>
+                    <li>Cable remote controller, easy to operate, with auto-cleaning function</li>
+                    <li>All stainless steel contact parts ensure no pollution in material conveying</li>
+                    <li>Equipped with a cloth-type filter and auto spray cleaning and dust removal device, to extend the service life of the motor</li>
+                    <li>Chopper and bottom base can be adjusted in any direction</li>
+                    <li>Adopted magnetic red switch to control, ensuring sensitive induction and stable operation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="standardHopperLoaderModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('standardHopperLoader')">&times;</button>
+            <h2>Standard Self-Contained Hopper Loader - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F3dedaf37905e4b0296c626d4c086f98b?format=webp&width=800" alt="Standard Self-Contained Hopper Loader 300G">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>With small footprint and low weight, available of being placed directly onto other machines or containers for auto loading</li>
+                    <li>Wire-controlled controller, easy to use</li>
+                    <li>Alarm for overload and material shortage</li>
+                    <li>Material contact parts are made of stainless steel to ensure that raw materials are not polluted during conveying</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Model Specifications</h3>
+                <ul class="machinery-features-list">
+                    <li><strong>300G Model:</strong> Adopts high-speed carbon brush motor, small size, strong suction, suitable for conveying new materials</li>
+                    <li><strong>40G Model:</strong> Adopts induction high-pressure motor, which has the function of reversing and automatically removing dust, with low noise and long life</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="vacuumHopperLoaderModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('vacuumHopperLoader')">&times;</button>
+            <h2>Standard Separate Vacuum Hopper Loader - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F13ec23c0301743059d26e0b97be0b858?format=webp&width=800" alt="Standard Separate Vacuum Hopper Loader">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Main machine separated from the hopper for easy and safe operation</li>
+                    <li>Independent filter for easy cleaning</li>
+                    <li>Stainless steel hopper ensures raw materials are not polluted during transportation</li>
+                    <li>Microcomputer operation control program</li>
+                    <li>Alarm for overload and material shortage</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Model Specifications</h3>
+                <ul class="machinery-features-list">
+                    <li><strong>700G Model:</strong> Adopts high-speed carbon brush motor, small size, strong suction, suitable for conveying new materials</li>
+                    <li><strong>800G/800G2 Models:</strong> With induction type high pressure motor, featuring low noise and long service time</li>
+                    <li><strong>800G/800G2 Models:</strong> Include reverse running and automatic dust removing function</li>
+                </ul>
+            </div>
+            <div class="machinery-features-section">
+                <h3>Testing &amp; Technical Notes</h3>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Conveying capacity and loading distance are tested by ABS material; actual data may differ by plastic proportions, shapes, loading lengths and heights, pipe conditions and parameter settings. For processing hot materials, Heat-Resistant (160°C) pipes are necessary.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="autoCollectingSystemModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('autoCollectingSystem')">&times;</button>
+            <h2>Granulator Auto Collecting System - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F5cffcdf2dd574d129ceff113b7f359e3?format=webp&width=800" alt="Granulator Auto Collecting System">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Compatible with all series of granulators</li>
+                    <li>Automatic collecting regrinds from crusher, no manual involvement required</li>
+                    <li>Raw material contact part as plastic hose (or optional for stainless steel) to prevent contamination</li>
+                    <li>Dust-collecting devices adopted to store dust and prevent air pollution</li>
+                    <li>Easy and fast to disassemble and clean</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="powderSiftingDeviceModal" class="machinery-modal">
+        <div class="machinery-modal-content">
+            <button class="machinery-modal-close" onclick="closeMachineryModal('powderSiftingDevice')">&times;</button>
+            <h2>Auto Powder Sifting Device - Features & Specifications</h2>
+            <div class="machinery-modal-image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2F9d8341dcfb0348538d47eed875489893%2F32095734138144ca99800991c7902fe9?format=webp&width=800" alt="Auto Powder Sifting Device">
+            </div>
+            <div class="machinery-features-section">
+                <h3>Key Features</h3>
+                <ul class="machinery-features-list">
+                    <li>Compatible with Neelgiri full series of powerful granulators, during granulating process some small powder may occur, the sifter device is to automatically separate out the powder from the granulated output</li>
+                    <li>Automatic Conveying — by vacuum suction the granulated material will be automatically convey to the separator</li>
+                    <li>Automatic Separation of powder—separating powder occurred during the granulating process through the separator</li>
+                    <li>Machine Protection &amp; Dust Removing Function—the powder sifter device could take away the dust on blades and inside grinding chamber by the negative pressure suction created by sifter blower, hence reducing some manual cleaning job</li>
+                    <li>Contact part with raw material as stainless steel, no secondary contamination</li>
+                    <li>Suitable for all granulator models</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -1364,6 +2015,61 @@
         });
 
         document.querySelectorAll('.chiller-modal').forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        function openMachineryModal(modalId) {
+            const modalMap = {
+                'vTypeGranulator': 'vTypeGranuatorModal',
+                'flakeTypeGranulator': 'flakeTypeGranuatorModal',
+                'gbSeriesGranulator': 'gbSeriesGranuatorModal',
+                'mediumSpeedGranulator': 'mediumSpeedGranuatorModal',
+                'euroHopperDryer': 'euroHopperDryerModal',
+                'standardHopperDryer': 'standardHopperDryerModal',
+                'euroAutoLoader': 'euroAutoLoaderModal',
+                'standardHopperLoader': 'standardHopperLoaderModal',
+                'vacuumHopperLoader': 'vacuumHopperLoaderModal',
+                'autoCollectingSystem': 'autoCollectingSystemModal',
+                'powderSiftingDevice': 'powderSiftingDeviceModal'
+            };
+
+            const actualModalId = modalMap[modalId];
+            const modal = document.getElementById(actualModalId);
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMachineryModal(modalId) {
+            const modalMap = {
+                'vTypeGranulator': 'vTypeGranuatorModal',
+                'flakeTypeGranulator': 'flakeTypeGranuatorModal',
+                'gbSeriesGranulator': 'gbSeriesGranuatorModal',
+                'mediumSpeedGranulator': 'mediumSpeedGranuatorModal',
+                'euroHopperDryer': 'euroHopperDryerModal',
+                'standardHopperDryer': 'standardHopperDryerModal',
+                'euroAutoLoader': 'euroAutoLoaderModal',
+                'standardHopperLoader': 'standardHopperLoaderModal',
+                'vacuumHopperLoader': 'vacuumHopperLoaderModal',
+                'autoCollectingSystem': 'autoCollectingSystemModal',
+                'powderSiftingDevice': 'powderSiftingDeviceModal'
+            };
+
+            const actualModalId = modalMap[modalId];
+            const modal = document.getElementById(actualModalId);
+            if (modal) {
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.querySelectorAll('.machinery-modal').forEach(modal => {
             modal.addEventListener('click', function(e) {
                 if (e.target === this) {
                     this.classList.remove('show');
