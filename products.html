@@ -590,6 +590,183 @@
             box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
         }
 
+        .machinery-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #00bfff;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .machinery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-top-color: #002e5f;
+        }
+
+        .machinery-card-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+        }
+
+        .machinery-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .machinery-card:hover .machinery-card-image img {
+            transform: scale(1.05);
+        }
+
+        .machinery-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .machinery-card-title {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #002e5f;
+            margin-bottom: 0.5rem;
+        }
+
+        .machinery-card-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0.5rem 0 1rem 0;
+            flex-grow: 1;
+        }
+
+        .machinery-specs-btn {
+            background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .machinery-specs-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
+        }
+
+        .machinery-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .machinery-modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .machinery-modal-content {
+            background-color: #fefefe;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+            position: relative;
+        }
+
+        .machinery-modal-close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #002e5f;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .machinery-modal-close:hover {
+            color: #00bfff;
+            transform: scale(1.2);
+        }
+
+        .machinery-modal-content h2 {
+            color: #002e5f;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        .machinery-features-section {
+            margin-bottom: 2rem;
+        }
+
+        .machinery-features-section h3 {
+            color: #00bfff;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .machinery-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .machinery-features-list li {
+            padding: 0.8rem 0;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .machinery-features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .machinery-features-list li::before {
+            content: '✓ ';
+            color: #00bfff;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
         .cta-section {
             background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
             color: white;
