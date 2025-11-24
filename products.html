@@ -1317,25 +1317,6 @@
 
         function openMouldGallery(category) {
             const modal = document.getElementById('galleryModal');
-            const titleElement = document.getElementById('galleryTitle');
-            
-            const titles = {
-                'chemical': 'Chemical Packaging Moulds',
-                'cosmetic': 'Cosmetic Packaging Moulds',
-                'pharma': 'Pharmaceutical Packaging Moulds',
-                'pesticides': 'Pesticide Container Moulds',
-                'toys': 'Toy Manufacturing Moulds',
-                'floats': 'Float Ball Moulds',
-                'medical': 'Medical Product Moulds',
-                'caps': 'Caps & Closures Moulds',
-                'solar': 'Solar Float Moulds',
-                'drums': 'Drum Container Moulds',
-                'toolbox': 'Tool Box Moulds'
-            };
-
-            if (titleElement) {
-                titleElement.textContent = titles[category] || 'Product Gallery';
-            }
 
             if (modal) {
                 modal.classList.add('show');
