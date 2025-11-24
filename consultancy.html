@@ -630,5 +630,33 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            const whatsappPopup = document.getElementById('whatsappPopup');
+            const closePopup = document.getElementById('closePopup');
+            const catalogDownload = document.getElementById('catalogDownload');
+
+            whatsappBtn.addEventListener('click', function() {
+                whatsappPopup.classList.toggle('show');
+            });
+
+            closePopup.addEventListener('click', function() {
+                whatsappPopup.classList.remove('show');
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.whatsapp-widget')) {
+                    whatsappPopup.classList.remove('show');
+                }
+            });
+
+            catalogDownload.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Catalog download will be available soon. Please contact us on WhatsApp for the catalog.');
+            });
+        });
+    </script>
 </body>
 </html>
