@@ -406,10 +406,9 @@
                         <h4>About Us</h4>
                         <ul>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#home">Home</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#about">About us</a></li>
+                            <li><i class="ion-ios-arrow-forward"></i> <a href="about.html">About us</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="consultancy.html">Consultancy</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="products.html">Products</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Privacy policy</a></li>
                         </ul>
                     </div>
 
@@ -420,7 +419,6 @@
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#service">Services</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="contact.html">Contact</a></li>
                             <li><i class="ion-ios-arrow-forward"></i> <a href="index.html#faq">FAQ</a></li>
-                            <li><i class="ion-ios-arrow-forward"></i> <a href="#">Terms & Condition</a></li>
                         </ul>
                     </div>
 
@@ -429,20 +427,14 @@
                         <p>
                             CB GLOBLE INDIA<br>
                             Industrial Management & Consultancy<br>
-                            India <br>
+                            Flat No 206 Vapi Jagdish Co.op. Hsg. Society<br>
+                            Vapi, Valsad-396195, Gujarat, India<br>
                             <strong>Phone:</strong> +91 97244 00442<br>
                             <strong>Email:</strong> <a href="mailto:Sale@cbgloble.in" style="color: #00bfff; text-decoration: none;">Sale@cbgloble.in</a><br>
                             <strong>WhatsApp:</strong> <a href="https://wa.me/919724400442" style="color: #25D366; text-decoration: none;">+91 97244 00442</a>
                         </p>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 footer-newsletter">
-                        <h4>Subscription</h4>
-                        <p>Subscribe to receive updates about our latest projects, consultancy offerings, and industry insights.</p>
-                        <form action="" method="post">
-                            <input type="email" name="email" placeholder="Enter your email"><input type="submit" value="Subscribe">
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -461,6 +453,175 @@
 
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
 
+    <!-- WhatsApp Popup Widget -->
+    <div class="whatsapp-widget">
+        <button class="whatsapp-button" id="whatsappBtn" title="Chat with us">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <div class="whatsapp-popup" id="whatsappPopup">
+            <div class="popup-header">
+                <h4>How can we help?</h4>
+                <button class="popup-close" id="closePopup">&times;</button>
+            </div>
+            <div class="popup-content">
+                <p>Get in touch with us via WhatsApp or download our product catalog.</p>
+                <a href="https://wa.me/919724400442?text=Hello%20CB%20Globle%20India%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services" class="popup-link whatsapp-link">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <a href="#" class="popup-link catalog-link" id="catalogDownload">
+                    <i class="fa fa-download"></i> Download Catalog
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .whatsapp-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .whatsapp-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: #20BA5A;
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.6);
+            transform: scale(1.1);
+        }
+
+        .whatsapp-popup {
+            display: none;
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+            width: 320px;
+            overflow: hidden;
+            animation: slideUp 0.3s ease;
+        }
+
+        .whatsapp-popup.show {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .popup-header {
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .popup-header h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .popup-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            padding: 15px;
+        }
+
+        .popup-content p {
+            margin: 0 0 15px 0;
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .popup-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            gap: 8px;
+        }
+
+        .whatsapp-link {
+            background: #25D366;
+            color: white;
+        }
+
+        .whatsapp-link:hover {
+            background: #20BA5A;
+            color: white;
+        }
+
+        .catalog-link {
+            background: #002e5f;
+            color: white;
+            border: 2px solid #002e5f;
+        }
+
+        .catalog-link:hover {
+            background: #00bfff;
+            border-color: #00bfff;
+            color: white;
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-widget {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .whatsapp-popup {
+                width: 280px;
+            }
+        }
+    </style>
+
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -469,5 +630,33 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            const whatsappPopup = document.getElementById('whatsappPopup');
+            const closePopup = document.getElementById('closePopup');
+            const catalogDownload = document.getElementById('catalogDownload');
+
+            whatsappBtn.addEventListener('click', function() {
+                whatsappPopup.classList.toggle('show');
+            });
+
+            closePopup.addEventListener('click', function() {
+                whatsappPopup.classList.remove('show');
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.whatsapp-widget')) {
+                    whatsappPopup.classList.remove('show');
+                }
+            });
+
+            catalogDownload.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Catalog download will be available soon. Please contact us on WhatsApp for the catalog.');
+            });
+        });
+    </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
   },
   "functions": {
     "contactme.php": {
-      "runtime": "php-cgi"
+      "runtime": "php@8.2"
     }
   },
   "headers": [
