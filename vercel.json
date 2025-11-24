@@ -6,10 +6,10 @@
     "NODE_ENV": "production"
   },
   "functions": {
-    "contactme.php": {
+    "api/contactme.php": {
       "runtime": "@vercel/php@1.0.0"
     },
-    "careers.php": {
+    "api/careers.php": {
       "runtime": "@vercel/php@1.0.0"
     }
   },
@@ -56,8 +56,8 @@
   ],
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/contactme.php"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
