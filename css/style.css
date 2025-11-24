@@ -1125,7 +1125,8 @@ body{
 
 @media (max-width: 1200px){
     .faq{
-        min-height: 70vh;
+        min-height: auto;
+        padding: 3rem 2rem;
     }
 }        
 
