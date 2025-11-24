@@ -958,6 +958,18 @@ body{
         .footer .footer-top .footer-contact p {
             color: #ffffff;
             line-height: 26px;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer .footer-top .footer-contact {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .footer .footer-top .footer-contact h4 {
+            margin-bottom: 20px;
         }
         
         .footer .footer-top .footer-newsletter input[type="email"] {
