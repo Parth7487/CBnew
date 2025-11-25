@@ -1574,8 +1574,9 @@ body{
 @media (max-width: 480px) {
     .home{
         min-height: 85vh;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
     }
 
     .home-title{
@@ -1602,7 +1603,7 @@ body{
     }
 
     .home-overlay{
-        background: rgba(0, 46, 95, 0.6);
+        background: rgba(0, 46, 95, 0.25);
     }
 
     .pt-5.pb-5 .col-lg-4.col-sm-6 {
