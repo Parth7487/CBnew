@@ -1569,6 +1569,41 @@ body{
         background: #00bfff;
         border-radius: 10px;
     }
+}
+
+@media (max-width: 480px) {
+    .home{
+        min-height: 85vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home-title{
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .home-subtitle{
+        font-size: 0.85rem;
+        letter-spacing: 0.03em;
+        font-weight: 500;
+    }
+
+    .home-brand{
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        font-weight: 400;
+    }
+
+    .home-content{
+        gap: 0.8rem;
+        padding: 0 0.5rem;
+    }
+
+    .home-overlay{
+        background: rgba(0, 46, 95, 0.6);
+    }
 
     .pt-5.pb-5 .col-lg-4.col-sm-6 {
         flex: 0 0 100%;
