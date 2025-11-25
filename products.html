@@ -819,6 +819,11 @@
         }
 
         @media (max-width: 768px) {
+            .products-hero {
+                min-height: 45vh;
+                padding: 1rem;
+            }
+
             .products-hero h1 {
                 font-size: 2rem;
             }
@@ -828,49 +833,107 @@
             }
 
             .products-section {
-                padding: 3rem 0;
+                padding: 1.5rem 0;
             }
 
             .products-section h2 {
                 font-size: 1.8rem;
+                margin-bottom: 1.5rem;
             }
 
-            .product-grid {
-                grid-template-columns: 1fr;
+            .product-category {
+                margin-bottom: 2rem;
+                padding: 1.5rem 0;
             }
 
             .category-title {
                 font-size: 1.4rem;
+                margin-bottom: 1rem;
+                padding-bottom: 0.8rem;
             }
 
-            .cta-section {
-                padding: 2rem 1rem;
-            }
-
-            .cta-section h3 {
+            .category-title i {
+                margin-right: 0.5rem;
                 font-size: 1.5rem;
             }
 
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .product-card {
+                border-radius: 10px;
+            }
+
+            .product-card-header {
+                padding: 1rem;
+            }
+
+            .product-card-header h3 {
+                font-size: 1rem;
+            }
+
+            .product-card-body {
+                padding: 1rem;
+            }
+
+            .chiller-card-image {
+                height: 150px;
+            }
+
+            .machinery-card-image {
+                height: 180px;
+            }
+
+            .mould-item-image {
+                height: 150px;
+                font-size: 2rem;
+            }
+
+            .mould-solutions-grid {
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 1.5rem 1rem;
+                margin: 2rem 0;
+            }
+
+            .cta-section h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .cta-section p {
+                font-size: 0.95rem;
+            }
+
             .gallery-modal-content {
-                padding: 1.5rem;
+                padding: 1.2rem;
                 width: 95%;
             }
 
             .gallery-modal-content h2 {
                 font-size: 1.3rem;
+                margin-bottom: 1rem;
             }
 
-            .machinery-card-image {
-                height: 220px;
+            .gallery-images {
+                gap: 0.8rem;
+                margin-bottom: 1rem;
             }
 
             .machinery-modal-content {
-                padding: 1.5rem;
+                padding: 1.2rem;
                 width: 95%;
             }
 
             .machinery-modal-content h2 {
                 font-size: 1.3rem;
+                margin-bottom: 1rem;
             }
 
             .machinery-card-title {
@@ -879,10 +942,48 @@
 
             .machinery-card-description {
                 font-size: 0.85rem;
+                margin: 0.3rem 0 0.8rem 0;
+            }
+
+            .machinery-modal-image-wrapper {
+                margin-bottom: 1.5rem;
             }
 
             .machinery-modal-image-wrapper img {
                 max-height: 300px;
+            }
+
+            .machinery-features-section {
+                margin-bottom: 1.5rem;
+            }
+
+            .machinery-features-section h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .mould-item-content {
+                padding: 1rem;
+            }
+
+            .mould-item-title {
+                font-size: 1rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .mould-item-description {
+                font-size: 0.85rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .product-specs {
+                margin-top: 0.8rem;
+                padding-top: 0.8rem;
+            }
+
+            .spec-item {
+                margin: 0.3rem 0;
+                font-size: 0.85rem;
             }
         }
     </style>
