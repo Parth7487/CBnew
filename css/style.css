@@ -1551,6 +1551,15 @@ body{
         font-size: 1.2rem;
     }
 
+    .section-head {
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .pt-5.pb-5 {
+        padding: 2rem 0;
+    }
+
     .pt-5.pb-5 .row {
         display: flex;
         overflow-x: auto;
@@ -1572,6 +1581,12 @@ body{
     .pt-5.pb-5 .row::-webkit-scrollbar-thumb {
         background: #00bfff;
         border-radius: 10px;
+    }
+
+    .item {
+        margin-bottom: 15px;
+        margin-top: 0;
+        padding: 20px 15px;
     }
 }
 
