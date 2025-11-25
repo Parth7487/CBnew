@@ -164,8 +164,10 @@ body{
 .home{
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/img1.jpg);
+    background-image: url('https://cdn.builder.io/api/v1/image/assets%2F3ade264a35c940589f4bdcb0548ebe76%2F5202758068ba40dd972b4ac2521d3a1f?format=webp&width=800');
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,14 +178,56 @@ body{
     overflow: hidden !important;
 }
 
-.home h1{
-    color: #fff;
-    font-size: 5.5rem;
+.home-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 46, 95, 0.55);
+    z-index: 1;
 }
 
-.home h2{
+.home-content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 90%;
+}
+
+.home-title{
     color: #fff;
-    font-size: 3rem;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-subtitle{
+    color: #00bfff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-brand{
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
 }
 
 .home .wave{
