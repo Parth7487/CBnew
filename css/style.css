@@ -1643,6 +1643,77 @@ body{
     }
 }
 
+/* Contact CTA Section */
+.cta-contact-section {
+    background: linear-gradient(135deg, #002e5f 0%, #00bfff 100%);
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    border-radius: 15px;
+}
+
+.cta-contact-content {
+    text-align: center;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-contact-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.cta-contact-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+.cta-contact-btn {
+    display: inline-block;
+    background: white;
+    color: #002e5f;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-contact-btn:hover {
+    background: #00bfff;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .cta-contact-section {
+        padding: 2.5rem 1.5rem;
+        margin: 3rem 0;
+    }
+
+    .cta-contact-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-contact-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-contact-btn {
+        padding: 0.8rem 2rem;
+        font-size: 0.95rem;
+    }
+}
+
 /* Footer Bottom Section */
 .footer-bottom {
     background: linear-gradient(180deg, #001f42 0%, #001a36 100%);
