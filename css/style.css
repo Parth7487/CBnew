@@ -155,7 +155,7 @@ body{
 }
 
 .header .fa-bars{
-    color: #fff;
+    color: #333;
     cursor: pointer;
     font-size: 3rem;
     display: none;
