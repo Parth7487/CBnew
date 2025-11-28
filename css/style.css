@@ -109,9 +109,7 @@ body{
     justify-content: space-between;
     width: 100%;
     padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: relative;
     z-index: 100;
     background: #ffffff;
 }
