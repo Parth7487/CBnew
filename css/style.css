@@ -109,9 +109,11 @@ body{
     justify-content: space-between;
     width: 100%;
     padding: 1rem 2rem;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 100;
-    background: #d4e4f0;
+    background: #ffffff;
 }
 
 .header .logo img{
