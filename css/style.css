@@ -28,12 +28,13 @@ body{
 
 .heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4{
     margin: 1rem;
-    padding-top: 2rem;
-    display: inline-block;
+    padding-top: 5rem;
+    display: block;
     font-size: 3.5rem;
     color: #002e5f;
     position: relative;
     letter-spacing: .2rem;
+    z-index: 1;
 }
 
 .heading::before, .heading::after, .clients .section-header h2::before, .clients .section-header h2::after, .section-head h1::before, .section-head h1::after, .testimonials .section-header h2::before, .testimonials .section-header h2::after, .section-head-1 h4::before, .section-head-1 h4::after{
