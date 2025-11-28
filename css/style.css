@@ -27,8 +27,8 @@ body{
 }
 
 .heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4{
-    margin: 2rem;
-    padding-top: 6rem;
+    margin: 1rem;
+    padding-top: 2rem;
     display: inline-block;
     font-size: 3.5rem;
     color: #002e5f;
