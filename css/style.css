@@ -136,7 +136,7 @@ body{
 
 .header .navbar ul li a{
     font-size: 2rem;
-    color: #fff;
+    color: #333;
 }
 
 .header .navbar ul li a:hover{
