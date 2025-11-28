@@ -1580,6 +1580,11 @@ body{
         font-size: 1rem;
     }
 
+    .section-head {
+        padding-top: 2rem;
+        margin-top: 1rem;
+    }
+
     .section-head p, .pt-5 .container .row .section-head p{
         font-size: 1.2rem;
     }
