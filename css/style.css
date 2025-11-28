@@ -279,7 +279,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 4rem;
+    padding: 0 2rem;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .about .row .content{
@@ -300,6 +302,22 @@ body{
     font-size: 2rem;
     color: #333;
     padding: 1rem 0;
+    max-width: 100%;
+}
+
+.pt-5.pb-5 .container {
+    max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 0 auto;
+}
+
+.pt-5.pb-5 .row {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
   .section-head{
     margin-bottom: 60px;
@@ -1101,11 +1119,13 @@ body{
         }
         
         .faq .row{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 2rem;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
         
         .faq .row .accordion-container{
             width: 50%;
@@ -1278,7 +1298,8 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        padding: 0 4rem;
+        padding: 0 1.5rem;
+        margin: 0 auto;
     }
     
     .about .row .content{
@@ -1463,13 +1484,31 @@ body{
         }
 
         .faq .row{
-            padding: 0 1.5rem;
-            flex-flow: column;
-        }
+        padding: 0 1rem;
+        flex-flow: column;
+        max-width: 100%;
+        margin: 0 auto;
+    }
 
-        .faq .row .accordion-container{
-            width: 100%;
-        }
+    .faq .row .accordion-container{
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+
+    .faq .row .accordion {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .faq .row .accordion-container .accordion .accordion-header {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .faq .row .accordion-container .accordion .accordion-body {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 600px){
@@ -1562,27 +1601,27 @@ body{
         padding: 2rem 0;
     }
 
+    .pt-5.pb-5 .container {
+        max-width: 100%;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin: 0 auto;
+    }
+
     .pt-5.pb-5 .row {
         display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        flex-wrap: wrap;
+        justify-content: center;
         padding-bottom: 1rem;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
-    .pt-5.pb-5 .row::-webkit-scrollbar {
-        height: 4px;
-    }
-
-    .pt-5.pb-5 .row::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-
-    .pt-5.pb-5 .row::-webkit-scrollbar-thumb {
-        background: #00bfff;
-        border-radius: 10px;
+    .pt-5.pb-5 .col-lg-4.col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .item {
@@ -1678,22 +1717,28 @@ body{
     }
 
     .contact-form-txt, .contact-form-email, .contact-form-phone{
-        margin-left: 1rem;
-        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
         font-size: 1rem;
+        display: block;
     }
 
     .contact-form-txtarea{
-        margin-left: 1rem;
-        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
         font-size: 1rem;
         height: 100px;
+        display: block;
     }
 
     .contact-form-btn{
-        margin-left: 1rem;
-        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
         font-size: 1.2rem;
+        display: block;
     }
 
     .footer .footer-top h4{
@@ -1748,18 +1793,24 @@ body{
     }
 
     .contact-form-txt, .contact-form-email, .contact-form-phone{
-        margin-left: 0.5rem;
-        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        display: block;
     }
 
     .contact-form-txtarea{
-        margin-left: 0.5rem;
-        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        display: block;
     }
 
     .contact-form-btn{
-        margin-left: 0.5rem;
-        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        display: block;
     }
 
     .team .row .card{
