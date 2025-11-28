@@ -1581,8 +1581,12 @@ body{
     }
 
     .section-head {
+        padding-top: 4rem;
+        margin-top: 2rem;
+    }
+
+    .section-head h1 {
         padding-top: 2rem;
-        margin-top: 1rem;
     }
 
     .section-head p, .pt-5 .container .row .section-head p{
