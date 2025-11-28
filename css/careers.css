@@ -23,16 +23,17 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
+    background: transparent;
 }
 
 .header .logo img{
-    width: 20%;
-    height: 3rem;
+    width: 100%;
+    height: 4rem;
     top: 0;
     left: 0;
 }
@@ -45,12 +46,13 @@ body{
 }
 
 .header .navbar ul li{
-    margin: 0 1.5rem;
+    margin: 0 1.2rem;
 }
 
 .header .navbar ul li a{
-    font-size: 2rem;
-    color: #fff;
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: 600;
 }
 
 .header .navbar ul li a:hover{

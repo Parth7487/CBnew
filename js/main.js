@@ -9,15 +9,6 @@ $(document).ready(function(){
         $('.fa-bars').removeClass('fa-times');
         $('.navbar').removeClass('nav-toggle');
 
-        if($(window).scrollTop()>35)
-        {
-            $('.header').css({'background':'rgba(0, 46, 95, 0.95)','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
-        }
-        else
-        {
-            $('.header').css({'background':'transparent','box-shadow':'none'});
-        }
-
         // Scroll animation for items
         $('.item').each(function(){
             var elementPos = $(this).offset().top;
