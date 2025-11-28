@@ -1582,11 +1582,15 @@ body{
 
     .section-head {
         padding-top: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-top: 2rem;
+        max-width: 100%;
     }
 
     .section-head h1 {
         padding-top: 2rem;
+        word-wrap: break-word;
     }
 
     .section-head p, .pt-5 .container .row .section-head p{
