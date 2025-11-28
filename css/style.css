@@ -1526,6 +1526,10 @@ body{
         margin-top: 2rem;
     }
 
+    #service, #portfolio, #faq, #about {
+        scroll-margin-top: 10rem;
+    }
+
     .about .row .content h3 {
         font-size: 1.5rem;
     }
