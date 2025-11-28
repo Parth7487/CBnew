@@ -289,12 +289,14 @@ body{
 .about .row .content h3{
     font-size: 3rem;
     color: black;
+    margin: 1rem 0;
 }
 
 .about .row .content p{
     font-size: 2rem;
     color: #333;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    margin: 0;
 }
 .pt-5 .container .row .section-head p{
     font-size: 2rem;
