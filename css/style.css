@@ -43,6 +43,7 @@ body{
     width: 2.5rem;
     border-top: .4rem solid #002e5f;
     border-left: .4rem solid #002e5f;
+    display: none;
 }
 
 .faq .heading::before, .faq .heading::after{
