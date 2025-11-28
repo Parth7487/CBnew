@@ -27,13 +27,14 @@ body{
 }
 
 .heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4{
-    margin: 2rem;
-    padding-top: 6rem;
-    display: inline-block;
+    margin: 1rem;
+    padding-top: 5rem;
+    display: block;
     font-size: 3.5rem;
     color: #002e5f;
     position: relative;
     letter-spacing: .2rem;
+    z-index: 1;
 }
 
 .heading::before, .heading::after, .clients .section-header h2::before, .clients .section-header h2::after, .section-head h1::before, .section-head h1::after, .testimonials .section-header h2::before, .testimonials .section-header h2::after, .section-head-1 h4::before, .section-head-1 h4::after{
@@ -43,6 +44,7 @@ body{
     width: 2.5rem;
     border-top: .4rem solid #002e5f;
     border-left: .4rem solid #002e5f;
+    display: none;
 }
 
 .faq .heading::before, .faq .heading::after{
@@ -112,7 +114,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 2000;
     background: transparent;
 }
 
@@ -265,17 +267,17 @@ body{
 }
 
 .about{
-    min-height: 55vh;
-    width: 100vw;
-    top: -3rem;
+    min-height: auto;
+    width: 100%;
     text-align: center;
     position: relative;
-    overflow: hidden;
-    line-height: 10rem;
+    overflow-x: hidden;
+    padding: 3rem 2rem;
+    margin-top: 0;
 }
 
 .about .row{
-    line-height: 4rem;
+    line-height: 1.6;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -289,12 +291,14 @@ body{
 .about .row .content h3{
     font-size: 3rem;
     color: black;
+    margin: 1rem 0;
 }
 
 .about .row .content p{
     font-size: 2rem;
     color: #333;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    margin: 0;
 }
 .pt-5 .container .row .section-head p{
     font-size: 2rem;
@@ -304,7 +308,7 @@ body{
   .section-head{
     margin-bottom: 60px;
     text-align: center;
-    margin-top: -8rem;
+    margin-top: 2rem;
   }
   .section-head p{
     font-size: 20px;
@@ -318,7 +322,7 @@ body{
     box-shadow: 0 0 25px rgba(0,0,0,0.07);
     border-radius: 20px;
     margin-bottom: 30px;
-    margin-top: -2rem;
+    margin-top: 0;
     border:5px solid rgba(0,0,0,0.07);
     -webkit-transition:all 0.5s ease 0s;
     transition:all 0.5s ease 0s;
@@ -427,9 +431,9 @@ body{
 
 .section-head-1{
     margin-bottom: 60px;
+    margin-top: 2rem;
     background-size: 200%;
     background-position: left;
-
   }
   .section-head-1 p{
     color:#333;
@@ -1262,38 +1266,38 @@ body{
     }
 
     .about{
-        min-height: 38vh;
-        width: 100vw;
-        margin-top: -3rem;
-        margin-bottom: -2rem;
-        top: -2rem;
+        min-height: auto;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
         text-align: center;
         position: relative;
-        overflow: hidden;
-        line-height: 6rem;
+        overflow-x: hidden;
+        padding: 2rem 1rem;
     }
-    
+
     .about .row{
-        line-height: 2rem;
+        line-height: 1.6;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        padding: 0 4rem;
+        justify-content: center;
+        padding: 0 1rem;
     }
-    
+
     .about .row .content{
         text-align: center;
     }
-    
+
     .about .row .content h3{
-        font-size: 2rem;
-        color: var(--color);
+        font-size: 1.8rem;
+        color: #000;
     }
-    
+
     .about .row .content p{
-        font-size: 1.3rem;
+        font-size: 1rem;
         color: #333;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     } 
 
     .clients {
@@ -1472,6 +1476,22 @@ body{
         }
 }
 
+@media (max-width: 768px) {
+    .pt-5 {
+        padding: 2rem 1rem !important;
+    }
+
+    .pb-5 {
+        padding: 2rem 1rem !important;
+    }
+
+    .heading, .section-head h1, .section-head-1 h4 {
+        font-size: 2.2rem;
+        margin: 0.5rem;
+        padding-top: 1rem;
+    }
+}
+
 @media (max-width: 600px){
     html{
         font-size: 45%;
@@ -1497,6 +1517,42 @@ body{
 
     .home-overlay{
         background: rgba(0, 46, 95, 0.3);
+    }
+
+    .heading, .section-head h1, .section-head-1 h4 {
+        font-size: 1.8rem;
+        margin: 0.5rem 0.5rem 0.5rem 2rem;
+        padding-top: 4rem;
+        margin-top: 2rem;
+        width: calc(100% - 2rem);
+    }
+
+    #service, #portfolio, #faq, #about {
+        scroll-margin-top: 10rem;
+    }
+
+    .header {
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    .about .row .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .about .row .content p {
+        font-size: 0.9rem;
+    }
+
+    .pt-5, .pb-5 {
+        padding: 1.5rem 0.5rem !important;
+    }
+
+    .item h6 {
+        font-size: 1.5rem;
+    }
+
+    .item p {
+        font-size: 0.9rem;
     }
 
     .home-title{
@@ -1531,6 +1587,19 @@ body{
 
     .about .row .content p{
         font-size: 1rem;
+    }
+
+    .section-head {
+        padding-top: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+
+    .section-head h1 {
+        padding-top: 2rem;
+        word-wrap: break-word;
     }
 
     .section-head p, .pt-5 .container .row .section-head p{
