@@ -1521,13 +1521,18 @@ body{
 
     .heading, .section-head h1, .section-head-1 h4 {
         font-size: 1.8rem;
-        margin: 0.5rem;
+        margin: 0.5rem 0.5rem 0.5rem 2rem;
         padding-top: 4rem;
         margin-top: 2rem;
+        width: calc(100% - 2rem);
     }
 
     #service, #portfolio, #faq, #about {
         scroll-margin-top: 10rem;
+    }
+
+    .header {
+        background: rgba(255, 255, 255, 0.95);
     }
 
     .about .row .content h3 {
