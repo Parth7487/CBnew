@@ -1522,8 +1522,8 @@ body{
     .heading, .section-head h1, .section-head-1 h4 {
         font-size: 1.8rem;
         margin: 0.5rem;
-        padding-top: 6rem;
-        margin-top: 3rem;
+        padding-top: 4rem;
+        margin-top: 2rem;
     }
 
     .about .row .content h3 {
