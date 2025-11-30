@@ -141,11 +141,6 @@ document.querySelectorAll('.counters > div').forEach(el => {
 });
 
 
-// Navbar link active state
-$('.navbar a').on('click', function(){
-    $('.navbar a').removeClass('active');
-    $(this).addClass('active');
-});
 
 // Performance optimization: Lazy loading for images
 if('IntersectionObserver' in window){
