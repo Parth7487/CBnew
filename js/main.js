@@ -140,15 +140,6 @@ document.querySelectorAll('.counters > div').forEach(el => {
     observer.observe(el);
 });
 
-// Add hover effects to service items
-$('.item').hover(
-    function(){
-        $(this).css('cursor', 'pointer');
-    },
-    function(){
-        $(this).css('cursor', 'default');
-    }
-);
 
 // Navbar link active state
 $('.navbar a').on('click', function(){
